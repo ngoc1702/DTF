@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <title>Giới thiệu</title> 
+    <link rel="icon" type="image/png" href=""  />
+    <link rel="stylesheet" href="/assets/css/reset.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/ngoc.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!--SCRIPT-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <body>
+    <main>
+     <!--Header-->
+     <header class="bg-[#FFF]  fixed nav_header w-full shadow-lg z-20">
+      <div class="max-content flex items-stretch justify-between gap-5 md:px-0 py-2 max-md:flex-wrap px-5">
+         <a class="py-auto" href="/"><img loading="lazy"
+               src="./assets/images/Logo.png"
+               class="pt-[5px] md:pt-0 aspect-[1.82] object-contain object-center w-[80px] md:w-[100px] overflow-hidden shrink-0 max-w-full " />
+          </a>
+          <!--Header PC-->
+          <div class="hidden md:flex  items-center py-4 absolute z-50 bg-white top-16  right-[0px] justify-items-end justify-end items-end md:relative md:top-0 md:bg-transparent items-stretch  flex-col md:flex-row">
+            <div class="nav__link text-pantone md:text-black text-25 leading-6 grow whitespace-nowrap">
+              <a class="  mx-5 py-3 @(currentUrl.Contains("gioi-thieu") ? "active" : "") "
+                 onclick="printClickedElement(event)"
+                 href="">Trang chủ</a>
+          </div>       
+            <div class="nav__link text-pantone md:text-black text-25 leading-6 grow whitespace-nowrap">
+                  <a class="  mx-5 py-3 @(currentUrl.Contains("gioi-thieu") ? "active" : "") "
+                     onclick="printClickedElement(event)"
+                     href="">Giới thiệu</a>
+              </div>                   
+              <!--Menu Sản phẩm - Dịch vụ-->
+             <div class="menu relative">
+                <li class="nav__link text-pantone md:text-black text-25 leading-6">
+                    <a class="mx-5 py-3 @(currentUrl.Contains("dich-vu") ? "active" : "")" onclick="printClickedElement(event)" href="">Sản phẩm & Dịch vụ</a>
+                </li>
+                <!-- Sub Menu -->
+                <ul  id="sub-menu" class="hidden sub-menu background_second transition py-2 flex flex-col  text-base font-semibold leading-6  rounded-lg  text-neutral-800">
+                    <li class="nav__link2 sub-menu-current relative py-2 pl-4">
+                        <a href="#" onclick="highlightParent(this)" class="">Thiết kế & Thi công nội thất </a>
+                        <!-- Sub-submenu -->
+                        <div  class="sub-submenu hidden background_second transition shadow-lg rounded-lg">
+                            <ul  class=" py-2 px-2 flex flex-col text-base font-semibold leading-6   text-neutral-800">
+                                <li class="nav__link2 py-2 pl-4">
+                                    <a href="" onclick="highlightParent(this)" class="">Nội thất văn phòng</a>
+                                </li>
+                                <li class="nav__link2 py-2 pl-4">
+                                    <a href="" onclick="highlightParent(this)" class="">Nội thất Biệt thự - Nhà riêng - Chung cư</a>
+                                </li>
+                                <li class="nav__link2 py-2 pl-4">
+                                    <a href="" onclick="highlightParent(this)" class="">Nội thất Nhà hàng - Cafe - Bar</a>
+                                </li>
+                                <li class="nav__link2 py-2 pl-4">
+                                    <a href="#" onclick="highlightParent(this)" class="">Nội thất Trường học - Mầm non</a>
+                                </li>
+                                <li class="nav__link2 py-2 pl-4">
+                                    <a href="" onclick="highlightParent(this)" class="">Nội thất Showroom</a>
+                                </li>
+                                <li class="nav__link2 py-2 pl-4">
+                                    <a href="" onclick="highlightParent(this)" class="">Nội thất Spa - Thẩm mĩ viện</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav__link2 py-2 pl-4">
+                        <a href="#" onclick="highlightParent(this)" class="">Sản xuất nội thất gỗ</a>
+                    </li>
+                    <li class="nav__link2 py-2 pl-4">
+                        <a href="#" onclick="highlightParent(this)" class="">Bảo trì, bảo dưỡng</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!--Menu Dự án-->
+             <div class="menu relative">
+              <li class="nav__link text-pantone md:text-black text-25 leading-6">
+                  <a class="  mx-5 py-3 @(currentUrl.Contains("du-an-hoan-thanh") ? "active" : "") "
+                     onclick="printClickedElement(event)"
+                     href="">Dự án </a>
+              </li>
+              <ul style="width: 300px;"  class="hidden sub-menu background_second py-2 px-[7px] flex flex-col  text-base font-semibold leading-6  rounded-lg shadow-lg text-neutral-800">
+                <li class="nav__link2 sub-menu-current relative py-2 pl-4">
+                    <a href="" onclick="highlightParent(this)" class="">Nội thất văn phòng</a>
+                </li>
+                <li class="nav__link2 py-2 pl-4">
+                    <a href="" onclick="highlightParent(this)" class="">Nội thất Biệt thự - Nhà riêng - Chung cư</a>
+                </li>
+                <li class="nav__link2 py-2 pl-4">
+                    <a href="" onclick="highlightParent(this)" class="">Nội thất Nhà hàng - Cafe - Bar</a>
+                </li>
+                <li class="nav__link2 py-2 pl-4">
+                  <a href="" onclick="highlightParent(this)" class="">Nội thất Trường học - Mầm non</a>
+              </li>
+              <li class="nav__link2 py-2 pl-4">
+                <a href="" onclick="highlightParent(this)" class="">Nội thất Showroom</a>
+            </li>
+            <li class="nav__link2 py-2 pl-4">
+              <a href="" onclick="highlightParent(this)" class="">Nội thất Spa - Thẩm mĩ viện</a>
+          </li>
+            </ul>
+                </div>
+              <div class="nav__link text-pantone md:text-black text-25 leading-6">
+                <a class="  mx-5 @(currentUrl.Contains("du-an-hoan-thanh") ? "active" : "") "
+                   onclick="printClickedElement(event)"
+                   href="">Nhà máy</a>
+            </div>
+              <div class="nav__link text-pantone md:text-black text-25 leading-6">
+                  <a class="  mx-5 @(currentUrl.Contains("tin-tuc") ? "active" : "") "
+                     onclick="printClickedElement(event)"
+                     href="">Tin tức</a>
+              </div>
+              <div class="nav__link text-pantone md:text-black text-25 leading-6">
+                  <a class="  mx-5 @(currentUrl.Contains("tuyen-dung") ? "active" : "") "
+                     onclick="printClickedElement(event)"
+                     href="">Tuyển dụng</a>
+              </div>
+              <div class="nav__link  text-pantone md:text-black text-25 leading-6 grow whitespace-nowrap">
+                  <a class="  mx-5 @(currentUrl.Contains("lien-he") ? "active" : "") "
+                     onclick="printClickedElement(event)"
+                     href="">Liên hệ</a>
+              </div>
+          </div>
+  
+          <div class="self-center flex items-stretch gap-1 my-auto hidden md:flex ">
+            <button>
+              <img loading="lazy"
+                   src="./assets/images/search 1.png"
+                   class="aspect-[0.71] object-contain object-center w-[18px] overflow-hidden shrink-0 max-w-full" />
+                  </button>
+                   <div class="mx-2">|</div>
+                   <button class="flex gap-2">
+                   <img loading="lazy"
+                   src="./assets/images/vietnam 1.png"
+                   class="aspect-[0.71] object-contain object-center w-[18px] overflow-hidden shrink-0 max-w-full" />
+                   <img loading="lazy"
+                   src="./assets/images/downward-arrow 3.png"
+                   class="pt-1 aspect-[0.71] object-contain object-center w-[18px] overflow-hidden shrink-0 max-w-full" />
+                  </button>
+                  </div>
+  
+          <!--Header mobile-->
+          <div class="block md:hidden">
+              <!--Menu-->
+              <div id="open_menu" onclick="openModal()" class="min-sm:block md:block lg:hidden  cursor-pointer pt-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <g clip-path="url(#clip0_372_1645)">
+                          <path fill="#222" d="M23 10.9998H1C0.447715 10.9998 0 11.4475 0 11.9998C0 12.552 0.447715 12.9998 1 12.9998H23C23.5523 12.9998 24 12.552 24 11.9998C24 11.4475 23.5523 10.9998 23 10.9998Z" fill="white" />
+                          <path fill="#222" d="M23 4.00024H1C0.447715 4.00024 0 4.44796 0 5.00024C0 5.55253 0.447715 6.00024 1 6.00024H23C23.5523 6.00024 24 5.55253 24 5.00024C24 4.44796 23.5523 4.00024 23 4.00024Z" fill="white" />
+                          <path fill="#222" d="M23 18H1C0.447715 18 0 18.4477 0 19C0 19.5523 0.447715 20 1 20H23C23.5523 20 24 19.5523 24 19C24 18.4477 23.5523 18 23 18Z" fill="white" />
+                      </g>
+                      <defs>
+                          <clipPath id="clip0_372_1645">
+                              <rect width="24" height="24" fill="white" />
+                          </clipPath>
+                      </defs>
+                  </svg>
+              </div>
+              <!--Modal-->
+              <div class="modal hidden" id="modalContainer">
+                  <div id="close_menu" class="pt-2 hidden"
+                       onclick="closeModalMobile()">
+                      <svg width="32"
+                           height="32"
+                           viewBox="0 0 16 16"
+                           fill="#222"
+                           xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7.99999 7.05732L11.3 3.75732L12.2427 4.69999L8.94266 7.99999L12.2427 11.3L11.3 12.2427L7.99999 8.94266L4.69999 12.2427L3.75732 11.3L7.05732 7.99999L3.75732 4.69999L4.69999 3.75732L7.99999 7.05732Z"
+                                fill="#222" />
+                      </svg>
+                  </div>
+                  <div class="h-screen mt-[5px] p-8 absolute z-50 bg-white top-14 left-0 right-0 md:relative md:top-0 md:bg-transparent items-stretch flex flex-col md:flex-row gap-5">
+                      <div class="text-gray-700  text-[18px] font-medium leading-6  whitespace-nowrap">
+                          <a onclick="closeModalMobile()" href="/">
+                              Trang chủ
+                          </a>
+                      </div>
+                      <div class="text-gray-700  text-[18px] font-medium leading-6 leading-6">
+                          <a onclick="closeModalMobile()" href="">
+                              Giới thiệu
+                          </a>
+                      </div>
+                      <div class="menu relative">
+                      <div class="text-gray-700  text-[18px] font-medium leading-6 leading-6">
+                          <li onclick="closeModalMobile()">
+                              Sản phẩm & Dịch vụ
+                          </li>
+                        </div>
+                          <!-- Sub Menu -->
+                <ul  id="sub-menu" class="hidden sub-menu transition background_second  py-2 flex flex-col  text-base font-semibold leading-6 rounded-lg border border-gray-100 border-solid shadow-lg text-neutral-800">
+                  <li class="nav__link2 sub-menu-current relative py-2 pl-4">
+                      <a href="#" onclick="highlightParent(this)" class="text-[18px]">Thiết kế & Thi công nội thất </a>
+                      <!-- Sub-submenu -->
+                      <div   class="sub-submenu hidden transition rounded-lg shadow-lg background_second ">
+                          <ul style="width: 300px;"  class="py-2 px-2 flex flex-col text-base font-semibold leading-6 text-neutral-800">
+                              <li class="nav__link2 py-2 pl-4">
+                                  <a href="" onclick="highlightParent(this)" class="text-[18px]">Nội thất văn phòng</a>
+                              </li>
+                              <li class="nav__link2 py-2 pl-4">
+                                  <a href="" onclick="highlightParent(this)" class="text-[18px]">Nội thất Biệt thự - Nhà riêng - Chung cư</a>
+                              </li>
+                              <li class="nav__link2 py-2 pl-4">
+                                  <a href="" onclick="highlightParent(this)" class="text-[18px]">Nội thất Nhà hàng - Cafe - Bar</a>
+                              </li>
+                              <li class="nav__link2 py-2 pl-4">
+                                  <a href="#" onclick="highlightParent(this)" class="text-[18px]">Nội thất Trường học - Mầm non</a>
+                              </li>
+                              <li class="nav__link2 py-2 pl-4">
+                                  <a href="" onclick="highlightParent(this)" class="text-[18px]">Nội thất Showroom</a>
+                              </li>
+                              <li class="nav__link2 py-2 pl-4">
+                                  <a href="" onclick="highlightParent(this)" class="text-[18px]">Nội thất Spa - Thẩm mĩ viện</a>
+                              </li>
+                          </ul>
+                      </div>
+                  </li>
+                  <li class="nav__link2 py-2 pl-4">
+                      <a href="#" onclick="highlightParent(this)" class="text-[18px]">Sản xuất nội thất gỗ</a>
+                  </li>
+                  <li class="nav__link2 py-2 pl-4">
+                      <a href="#" onclick="highlightParent(this)" class="text-[18px]">Bảo trì, bảo dưỡng</a>
+                  </li>
+              </ul>
+                          </div>
+                          <div class="menu relative">
+                          <div class="text-gray-700  text-[18px] font-medium leading-6 leading-6">
+                              <li onclick="closeModalMobile()" href="">
+                                  Dự án 
+                              </li>
+                              <ul style="width: 300px;"  class="hidden sub-menu background_second py-2 px-[7px] flex flex-col  text-base font-semibold leading-6  rounded-lg shadow-lg text-neutral-800">
+                                <li class="nav__link2 sub-menu-current relative py-2 pl-4">
+                                    <a href="" onclick="highlightParent(this)" class="">Nội thất văn phòng</a>
+                                </li>
+                                <li class="nav__link2 py-2 pl-4">
+                                    <a href="" onclick="highlightParent(this)" class="">Nội thất Biệt thự - Nhà riêng - Chung cư</a>
+                                </li>
+                                <li class="nav__link2 py-2 pl-4">
+                                    <a href="" onclick="highlightParent(this)" class="">Nội thất Nhà hàng - Cafe - Bar</a>
+                                </li>
+                                <li class="nav__link2 py-2 pl-4">
+                                  <a href="" onclick="highlightParent(this)" class="">Nội thất Trường học - Mầm non</a>
+                              </li>
+                              <li class="nav__link2 py-2 pl-4">
+                                <a href="" onclick="highlightParent(this)" class="">Nội thất Showroom</a>
+                            </li>
+                            <li class="nav__link2 py-2 pl-4">
+                              <a href="" onclick="highlightParent(this)" class="">Nội thất Spa - Thẩm mĩ viện</a>
+                          </li>
+                            </ul>
+                      </div>
+                    </div>
+                      <div class="text-gray-700  text-[18px] font-medium leading-6  whitespace-nowrap">
+                          <a onclick="closeModalMobile()" href="">
+                              Tin tức
+                          </a>
+                      </div>
+                      <div class="text-gray-700  text-[18px] font-medium leading-6  whitespace-nowrap">
+                          <a onclick="closeModalMobile()" href="">
+                              Tuyển dụng
+                          </a>
+                      </div>
+                      <div class="text-gray-700  text-[18px] font-medium leading-6  whitespace-nowrap">
+                          <a onclick="closeModalMobile()" href="">
+                              Liên hệ
+                          </a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+     </header>
+  <!--Banner-->
+	<section id="banner" class="z-10 flex-col items-stretch overflow-hidden justify-center pt-[62px] md:pt-[72px]">
+		<div class="swiper mySwiper" >
+			<div class="swiper-wrapper">
+			
+						<div class="swiper-slide" >
+							<a href=@Url.Content(item.Link) target="_blank">
+								<img class="z-1 banner-img w-full object-cover inset-0 blur-image" src="./assets/images/Banner_home.png" alt="" />
+							</a>
+								<div style="width:100vw; height:100vh" class=" absolute top-0 left-0 bg-black bg-opacity-30 flex flex-col items-stretch"></div>
+							<div class="banner-content " >
+								<p class="banner-title " ></p>
+								<p class="banner-title uppercase "></p>
+							</div>
+							</div>
+						
+			
+			</div>
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+		</div>
+	</section>
+    <!--Sub nav--> 
+ <section class=" bg-[#E9E4E1]">
+  <div class="max-content">
+    <ul class="hidden md:flex justify-between gap-5 py-5">
+      <li><a>Trang chủ</a></li>
+      <li><a>Thư ngỏ</a></li>
+      <li><a>Lĩnh vực hoạt động</a></li>
+      <li><a>Lịch sử hình thành</a></li>
+      <li><a>Tầm nhìn - Sứ mệnh - Giá trị cốt lõi</a></li>
+      <li><a>Nhà máy sản xuất</a></li>
+    </ul>
+  </div>
+ </section>
+
+ <!--Giới thiệu chung-->
+ <section class="max-content py-20">
+    <div class="flex gap-5 max-md:flex-col max-md:gap-0">
+      <div class="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
+        <article class="flex flex-col px-5 text-lg font-semibold max-md:mt-10 max-md:max-w-full">
+          <div  class="shrink-0 h-px bg-orange-400 border-4 border-orange-400 border-solid max-md:max-w-full md:w-[50px]"></div>
+          <h2 class="mt-9 text-5xl text-blue-900 leading-[60px] max-md:max-w-full max-md:text-4xl max-md:leading-[53px]">
+            Giới thiệu chung về <br /> DTF Group
+          </h2>
+          <p class="mt-7 text-neutral-700 max-md:max-w-full">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen has survived not only five centuries, but also the leap into electronic typesetting, remaining electronic essentially unchanged.
+            <br />
+            <br />
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          </p>
+          <a href="#" class="flex gap-2 self-start px-9 py-3.5 mt-28 text-white bg-orange-400 rounded-[500px] max-md:px-5 max-md:mt-10">
+            <span class="grow">Xem thêm</span>
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/0eae846d4e9e4ee43b2ba5c12cda7fe0a867600207fe7a08c5b31c6a216688f7?apiKey=4ea98b4671db4e878c37ea9c15c28237&" alt="" class="shrink-0 w-4 aspect-square" />
+          </a>
+        </article>
+      </div>
+      <div class="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9aa3e66a048c4de588e8ac2a1ee31c9fe1103d9c77fe70b1e5d06473469eb36b?apiKey=4ea98b4671db4e878c37ea9c15c28237&" alt="Giới thiệu chung về DTF Group" class="grow w-full aspect-[1.16] max-md:mt-10 max-md:max-w-full" />
+      </div>
+    </div>
+  </section>
+<!--Thư ngỏ-->
+<section class="max-content flex overflow-hidden relative flex-col justify-center text-white min-h-[1000px]">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/9e7f9ebb9864dc69fded687cdd6cb2be81816443eb9be97b5156c23bd028bc36?apiKey=4ea98b4671db4e878c37ea9c15c28237&" alt="" class="object-cover absolute inset-0 size-full" />
+    <div class="flex relative justify-center items-center px-16 py-20 w-full bg-blue-900 bg-opacity-90 max-md:px-5 max-md:max-w-full">
+      <div class="flex flex-col items-center mt-5 mb-36 w-full max-w-[1417px] max-md:mb-10 max-md:max-w-full">
+        <div class="shrink-0 h-1 bg-white border-4 border-white border-solid w-[172px]"></div>
+        <h2 class="mt-10 text-5xl font-bold leading-8 text-center max-md:text-4xl">Thư ngỏ</h2>
+        <p class="self-stretch mt-20 text-lg max-md:mt-10 max-md:max-w-full">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen has survived not only five centuries, but also the leap into electronic typesetting, remaining electronic essentially unchanged.
+          <br />
+          <br />
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          <br />
+          <br />
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          <br />
+          <br />
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen has survived not only five centuries, but also the leap into electronic typesetting, remaining electronic essentially unchanged.
+          <br />
+          <br />
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry lorem Ipsum has been the industry's standard dummy text ever since
+          </p>
+      </div>
+    </div>
+</section>
+          <!--Các lĩnh vực hoạt động-->
+<section class="max-content py-20 flex flex-col px-5">
+    <h2 class="self-center text-5xl font-bold text-center text-blue-900 leading-[60px] max-md:max-w-full max-md:text-4xl">Các lĩnh vực hoạt động</h2>
+    <div class="mt-20 w-full max-md:mt-10 max-md:max-w-full">
+      <div class="flex gap-5 max-md:flex-col max-md:gap-0">
+        <div class="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
+          <div class="flex flex-col grow text-3xl font-medium leading-8 text-white max-md:mt-5 max-md:max-w-full">
+            <figure class="flex overflow-hidden relative flex-col justify-center w-full leading-8 min-h-[277px] max-md:max-w-full">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/839a492d8ad8a70c2c1920166fc4262ba90fa9419f82f647cb1e0c5cbfb349f3?apiKey=4ea98b4671db4e878c37ea9c15c28237&" alt="Thiết kế, thi công nội thất & xây dựng" class="object-cover absolute inset-0 size-full" />
+              <figcaption class="relative items-start px-9 pt-48 pb-7 max-md:px-5 max-md:pt-10 max-md:max-w-full">Thiết kế, thi công <br /> nội thất & xây dựng</figcaption>
+            </figure>
+            <figure class="flex overflow-hidden relative flex-col justify-center mt-4 w-full min-h-[277px] max-md:max-w-full">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/339e25a09741dd9999f3a3ef836ddecead9be889f7de3524bbe818aa921f32fa?apiKey=4ea98b4671db4e878c37ea9c15c28237&" alt="Sản xuất nội thất" class="object-cover absolute inset-0 size-full" />
+              <figcaption class="relative items-start px-9 pt-56 pb-7 max-md:px-5 max-md:pt-10 max-md:max-w-full">Sản xuất nội thất</figcaption>
+            </figure>
+            <figure class="flex overflow-hidden relative flex-col justify-center mt-4 w-full min-h-[277px] max-md:max-w-full">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/22aec5c3d36267304db0bff0785e3b1d7fbfb4f5b2899deceaf8ebd0d4464ff0?apiKey=4ea98b4671db4e878c37ea9c15c28237&" alt="Bảo trì, bảo dưỡng" class="object-cover absolute inset-0 size-full" />
+              <figcaption class="relative items-start px-9 pt-56 pb-7 max-md:px-5 max-md:pt-10 max-md:max-w-full">Bảo trì, bảo dưỡng</figcaption>
+            </figure>
+          </div>
+        </div>
+        <div class="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
+          <div class="flex flex-col grow text-3xl font-medium leading-8 text-white max-md:mt-5 max-md:max-w-full">
+            <figure class="flex overflow-hidden relative flex-col justify-center w-full min-h-[426px] max-md:max-w-full">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/28b0d1bf2bc2f9ba2d3a51a49b8fd41cd08473546c183b709c4be59f050432eb?apiKey=4ea98b4671db4e878c37ea9c15c28237&" alt="Kinh doanh Bất động sản" class="object-cover absolute inset-0 size-full" />
+              <figcaption class="relative items-start px-9 pt-96 pb-9 max-md:px-5 max-md:pt-10 max-md:max-w-full">Kinh doanh Bất động sản</figcaption>
+            </figure>
+            <figure class="flex overflow-hidden relative flex-col justify-center mt-5 w-full min-h-[420px] max-md:max-w-full">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ad68f07d14833f3c0b0b2d676253f40904ed0589ecdba0676cbe0c7f5c086d88?apiKey=4ea98b4671db4e878c37ea9c15c28237&" alt="Thương mại" class="object-cover absolute inset-0 size-full" />
+              <figcaption class="relative items-start px-9 pt-96 pb-9 max-md:px-5 max-md:pt-10 max-md:max-w-full">Thương mại</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!--Lịch sử hình thành-->
+<section class="max-content py-20 flex overflow-hidden relative flex-col justify-center min-h-[1769px]">
+    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/43c44560456985b6030ba02b088411a84375f7c01082b234608b931155d204dd?apiKey=4ea98b4671db4e878c37ea9c15c28237&" alt="" class="object-cover absolute inset-0 w-full h-full" />
+    <div class="flex relative justify-center items-center px-16 py-20 w-full bg-blue-900 bg-opacity-90 sm:px-5 sm:max-w-full">
+        <div class="flex flex-col mt-10 mb-5 w-full max-w-[1440px] sm:mt-10 sm:max-w-full">
+            <div class="shrink-0 h-1 bg-white border-4 border-white border-solid sm:max-w-full"></div>
+            <h1 class="mt-11 text-5xl font-bold text-white leading-[60px] sm:mt-10 sm:text-4xl">Lịch sử hình thành và phát triển</h1>
+            <div class="flex gap-5 justify-between items-end self-center mt-20 max-w-full w-[1268px] sm:flex-wrap sm:mt-10">
+                <div class="flex flex-col items-center mt-16 sm:mt-10">
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/3e380c4df4cc01fd7c8db2cec9c791e3f9e110c8f3e16a70dfebe2c8cf02c9d3?apiKey=4ea98b4671db4e878c37ea9c15c28237&" alt="Hình ảnh mô tả" class="aspect-square w-[88px]" />
+                    <div class="shrink-0 mt-11 w-2.5 h-2.5 bg-white rounded-full sm:mt-10"></div>
+                </div>
+                <div class="flex flex-col self-stretch text-white">
+                    <div class="text-3xl font-bold leading-[60px]">2023</div>
+                    <p class="mt-5 text-lg">Nhà máy sản xuất gỗ đầu tiên chính thức được xây dựng tại Cổ Loa Đông Anh Hà Nội</p>
+                    <div class="shrink-0 mt-28 w-2.5 h-2.5 bg-white rounded-full sm:mt-10"></div>
+                </div>
+                <div class="flex flex-col items-center mt-16 sm:mt-10">
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/41767b78544f70548b41ad15a0818c65ee6bf44196fe92137576bbfcce0939c5?apiKey=4ea98b4671db4e878c37ea9c15c28237&" alt="Hình ảnh mô tả" class="aspect-square w-[88px]" />
+                    <div class="shrink-0 mt-11 w-2.5 h-2.5 bg-white rounded-full sm:mt-10"></div>
+                </div>
+                <div class="flex flex-col self-stretch text-white">
+                    <div class="text-3xl font-bold leading-[60px]">2018</div>
+                    <p class="mt-5 text-lg">Nhận góp vốn từ cổng đông Nhật đưa DTF trở thành công ty có tiêu chuẩn Nhật Bản</p>
+                    <div class="shrink-0 mt-28 w-2.5 h-2.5 bg-white rounded-full sm:mt-10"></div>
+                </div>
+                <div class="flex flex-col items-center mt-16 sm:mt-10">
+                    <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/dd12d78ccac326eed2d2ddd25d229fb5bd791381f304dab2c4cceeabda994a5c?apiKey=4ea98b4671db4e878c37ea9c15c28237&" alt="Hình ảnh mô tả" class="aspect-square w-[88px]" />
+                </div>
+            </div>
+            <div class="flex gap-5 justify-between items-start mt-28 text-white sm:flex-wrap sm:mt-10 sm:max-w-full">
+                <div class="flex flex-col">
+                    <div class="self-center text-3xl font-bold text-center leading-[60px]">2012</div>
+                    <p class="mt-6 text-lg">Thành lập Công ty với tên gọi CTCP Xây dựng và Thương Mại Đông Anh</p>
+                </div>
+                <div class="flex flex-col">
+                    <div class="self-center text-3xl font-bold text-center leading-[60px]">2015</div>
+                    <p class="mt-5 text-lg">Mở rộng lĩnh vực san cơ điện phục vụ toàn diện các dịch vụ với chất lượng cao đến khách hàng, đối tác</p>
+                </div>
+                <div class="flex flex-col self-stretch">
+                    <div class="self-center text-3xl font-bold text-center leading-[60px]">2018 trở đi</div>
+                    <p class="mt-5 text-lg">Thiết kế thi công nhiều công trình văn phòng, trường học lớn cho các đối tác Việt Nam, Nhật Bản. Khách hàng ngày càng tin tưởng trao tay DTF những đơn đặt hàng giá trị cao với độ phức tạp ngày một lớn</p>
+                </div>
+            </div>
+            <div class="mt-32 sm:mt-10 sm:max-w-full">
+                <div class="flex gap-5 sm:flex-col sm:gap-0">
+                    <div class="flex flex-col w-[33%] sm:ml-0 sm:w-full">
+                        <article class="flex flex-col grow sm:mt-10">
+                            <div class="flex flex-col px-6 pt-6 pb-12 bg-white rounded-xl sm:px-5">
+                                <h3 class="text-3xl font-bold leading-[60px] text-neutral-700">Trụ sở chính</h3>
+                                <div class="shrink-0 mt-3 h-px bg-neutral-700 bg-opacity-50"></div>
+                                <p class="mt-8 text-lg text-blue-900">
+                                    <span class="font-medium">Tầng 1A, tháp C tòa Central Point,</span><br>
+                                    <span class="font-medium">219 Trung Kính, Yên Hòa, Cầu Giấy, Hà Nội</span><br><br>
+                                    <span class="font-medium text-blue-900">Xem trên bản đồ</span>
+                                </p>
+                            </div>
+                            <div class="flex flex-col px-6 pt-6 pb-12 mt-80 bg-white rounded-xl sm:px-5 sm:mt-10">
+                                <h3 class="text-3xl font-bold leading-[60px] text-neutral-700">VPĐD tại TP. HCM</h3>
+                                <div class="shrink-0 mt-3 h-px bg-neutral-700 bg-opacity-50"></div>
+                                <p class="mt-8 text-lg text-blue-900">
+                                    <span class="font-medium">Số 48 đường số 2, KDC Cityland, P7, Q. Gò Vấp, TP. Hồ Chí Minh</span><br><br>
+                                    <span class="font-medium text-blue-900">Xem trên bản đồ</span>
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="flex flex-col ml-5 w-[33%] sm:ml-0 sm:w-full">
+                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/cc57a4899f734d4c4e49aab4ce575b71f7874d9bea7a156e0b76d868bb6a976d?apiKey=4ea98b4671db4e878c37ea9c15c28237&" alt="Trụ sở chính" class="grow w-full aspect-[0.68] sm:mt-10 sm:max-w-full" />
+                    </div>
+                    <div class="flex flex-col ml-5 w-[33%] sm:ml-0 sm:w-full">
+                        <article class="flex flex-col grow sm:mt-10">
+                            <div class="flex flex-col px-6 pt-6 pb-16 bg-white rounded-xl sm:px-5">
+                                <h3 class="text-3xl font-bold leading-[60px] text-neutral-700">Nhà máy Hà Nội</h3>
+                                <div class="shrink-0 mt-3 h-px bg-neutral-700 bg-opacity-50"></div>
+                                <p class="mt-7 text-lg text-blue-900">
+                                    <span class="font-medium">Đường Đào Duy Tùng, Cổ Loa, Đông Anh, Hà Nội</span><br><br>
+                                    <span class="font-medium text-blue-900">Xem trên bản đồ</span>
+                                </p>
+                            </div>
+                            <div class="flex flex-col px-6 pt-6 pb-12 mt-80 bg-white rounded-xl sm:px-5 sm:mt-10">
+                                <h3 class="text-3xl font-bold leading-[60px] text-neutral-700">Nhà máy tại TP. HCM</h3>
+                                <div class="shrink-0 mt-3 h-px bg-neutral-700 bg-opacity-50"></div>
+                                <p class="mt-7 text-lg text-blue-900">
+                                    <span class="font-medium">Số 65 Ngô Quang Thắm, Ấp 2, Long Thới, Nhà Bè, TP. Hồ Chí Minh</span><br><br>
+                                    <span class="font-medium text-blue-900">Xem trên bản đồ</span>
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Tầm nhìn & sứ mệnh-->
+<section class="max-content py-20 flex flex-col items-center px-5">
+    <h2 class="text-5xl font-bold text-center text-blue-900 leading-[60px] max-md:text-4xl">Tầm nhìn</h2>
+    <p class="mt-14 text-lg text-center text-neutral-700 max-md:mt-10 max-md:max-w-full">Bằng khát vọng cùng chiến lược phát triển bền vững, DTF phấn đấu trở thành doanh nghiệp cung cấp các giải pháp thiết kế thi công trọn gói hàng đầu Việt Nam, có uy tín góp phần nâng cao chất lượng cuộc sống của Khách hàng, Quý đối tác.</p>
+    <div class="shrink-0 mt-24 h-1 bg-orange-400 border-4 border-orange-400 border-solid w-[172px] max-md:mt-10"></div>
+    <h2 class="mt-14 text-5xl font-bold text-center text-blue-900 leading-[60px] max-md:mt-10 max-md:text-4xl">Sứ mệnh</h2>
+    <p class="mt-12 text-lg text-center text-neutral-700 max-md:mt-10 max-md:max-w-full">Mang đến những giá trị vượt trội cho thị trường, đối tác, nhân viên và toàn xã hội là mục tiêu mà DTF hướng tới</p>
+    <div class="self-stretch mt-20 w-full max-md:mt-10 max-md:max-w-full">
+      <div class="flex gap-5 max-md:flex-col max-md:gap-0">
+        <div class="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
+          <div class="flex flex-col grow items-center max-md:mt-10">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/35bcdcb4d9f49bfa4d7add35883b5025837225dec71d71c5c44b0a6cbc76e2af?apiKey=4ea98b4671db4e878c37ea9c15c28237&" alt="Đối với thị trường" class="max-w-full aspect-square rounded-[500px] w-[107px]" />
+            <h3 class="mt-10 text-2xl font-bold leading-6 text-center text-slate-700">Đối với thị trường</h3>
+            <p class="self-stretch mt-7 text-lg text-neutral-700">Cung cấp các sản phẩm, dịch vụ đẳng cấp về chất lượng; mang tính độc đáo và sáng tạo cao. Bên cạnh giá trị chất lượng vượt trội, trong mỗi sản phẩm, dịch vụ đều chứa đựng những thông điệp nhằm thỏa mãn tối đa nhu cầu của Khách hàng, đối tác.</p>
+          </div>
+        </div>
+        <div class="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
+          <div class="flex flex-col items-center max-md:mt-10">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/88e4f87f93f1c4cc3bd1ed528fad44fb12d59dec3ec90db11c0b44e9f916d2c5?apiKey=4ea98b4671db4e878c37ea9c15c28237&" alt="Đối với đối tác" class="max-w-full aspect-square rounded-[500px] w-[107px]" />
+            <h3 class="mt-10 text-2xl font-bold leading-6 text-center text-slate-700">Đối với đối tác</h3>
+            <p class="self-stretch mt-8 text-lg text-neutral-700">Đề cao tinh thần hợp tác cùng phát triển, luôn gia tang các giá trị đầu tư hấp dẫn và bền vững.</p>
+          </div>
+        </div>
+        <div class="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
+          <div class="flex flex-col items-center max-md:mt-10">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/2c1d5bd2a70f4bf9587b740b724890b422b4ab389cccb52352bbb81f0e13f4f3?apiKey=4ea98b4671db4e878c37ea9c15c28237&" alt="Đối với nhân viên" class="max-w-full aspect-square rounded-[500px] w-[107px]" />
+            <h3 class="mt-10 text-2xl font-bold leading-6 text-center text-slate-700">Đối với nhân viên</h3>
+            <p class="self-stretch mt-9 text-lg text-neutral-700">Xây dựng môi trường làm việc chuyên nghiệp, năng động, sáng tạo. Tạo môi trường phát triển công bằng và thu nhập vượt trội cho toàn thể nhân viên.</p>
+          </div>
+        </div>
+        <div class="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
+          <div class="flex flex-col items-center max-md:mt-10">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/303f2d8471701c0cd775b72f0c6ebc09f87f733539840cf166b78f335f802406?apiKey=4ea98b4671db4e878c37ea9c15c28237&" alt="Đối với xã hội" class="max-w-full aspect-square rounded-[500px] w-[107px]" />
+            <h3 class="mt-10 text-2xl font-bold leading-6 text-center text-slate-700">Đối với xã hội</h3>
+            <p class="self-stretch mt-8 text-lg text-neutral-700">Hài hòa lợi ích doanh nghiệp với lợi ích xã hội, đóng góp tích cực vào hoạt động cộng đồng, nâng cao chất lượng cuộc sống.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Giá trị cốt lõi-->
+  <section class=" py-20 flex justify-center items-center px-16 py-20 bg-stone-200 max-md:px-5">
+     <div class="max-content flex flex-col mt-6 w-full max-w-[1440px] max-md:max-w-full"> 
+        <div class="shrink-0 h-1 bg-orange-400 border-4 border-orange-400 border-solid max-md:max-w-full" ></div>
+         <h2 class="mt-12 text-5xl font-bold text-blue-900 leading-[60px] max-md:mt-10 max-md:max-w-full max-md:text-4xl" > Giá trị cốt lõi khác biệt </h2> <p class="mt-12 text-lg text-neutral-700 max-md:mt-10 max-md:max-w-full"> Điều gì làm chúng tôi được hàng trăm khách hàng tin dùng? Bởi chúng tôi có những giá trị cốt lõi khác biệt so với những phần còn lại. Thời gian và thực tế đã chứng minh điều đó! </p> <div class="px-0.5 mt-20 max-md:mt-10 max-md:max-w-full"> <div class="flex gap-5 max-md:flex-col max-md:gap-0"> <div class="flex flex-col w-3/12 max-md:ml-0 max-md:w-full"> <div class="flex flex-col grow px-8 pt-10 pb-20 w-full bg-white max-md:px-5 max-md:mt-10" > <h3 class="text-2xl font-bold leading-6 text-slate-700"> Dịch vụ tuyệt vời </h3> <p class="mt-6 text-lg text-neutral-700"> Chúng tôi hiểu tầm quan trọng của chất lượng dịch vụ nên luôn làm nó trở thành tốt nhất. </p> </div> </div> <div class="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full"> <div class="flex flex-col grow px-8 pt-10 pb-20 w-full bg-white max-md:px-5 max-md:mt-10" > <h3 class="text-2xl font-bold leading-6 text-slate-700"> Đội ngũ chuyên nghiệp </h3> <p class="mt-6 text-lg text-neutral-700"> Luôn đổi mới trong tư duy và công nghệ, bằng sự tận tâm và tinh thần trách nhiệm trong từng dự án. </p> </div> </div> <div class="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full"> <div class="flex flex-col grow px-8 pt-9 pb-20 w-full bg-white max-md:px-5 max-md:mt-10" > <h3 class="text-2xl font-bold leading-6 text-slate-700"> Chất lượng cao </h3> <p class="mt-6 text-lg text-neutral-700"> DTF luôn cố gắng chuẩn bị đầy đủ năng lực thực thi, nỗ lực hết mình để đảm bảo đúng và cao hơn các cam kết của mình với khách hàng, đối tác; đặc biệt là các cam kết về chất lượng sản phẩm – dịch vụ và tiến độ thực hiện. </p> </div> </div> <div class="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full"> <div class="flex flex-col grow px-8 pt-9 pb-20 w-full bg-white max-md:px-5 max-md:mt-10" > <h3 class="text-2xl font-bold leading-6 text-slate-700"> Giải pháp sáng tạo </h3> <p class="mt-6 text-lg text-neutral-700"> Khả năng đưa ra những ý tưởng, giải pháp sáng tạo để giải quyết những vấn đề. Tạo sự khác biệt, đa dạng hóa sản phẩm và dịch vụ để đáp ứng tối ưu nhu cầu của khách hàng. </p> </div> </div> </div> </div> </div>
+</section>
+<!--Banner2-->
+<section class="flex overflow-hidden relative flex-col justify-center text-lg text-white min-h-[899px]">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/193a07c1da2d2570f59c4988a9c3abbbce6f5a64823c3cf1190ed9aeb4c1bdc0?apiKey=4ea98b4671db4e878c37ea9c15c28237&" alt="Background image" class="object-cover absolute inset-0 size-full" />
+    <div class="flex relative flex-col justify-center items-start px-16 py-16 w-full bg-black bg-opacity-10 max-md:px-5 max-md:max-w-full">
+      <div class="flex flex-col ml-44 max-w-full mt-[474px] w-[1136px] max-md:mt-10">
+        <h1 class="text-5xl font-bold leading-[60px] max-md:max-w-full max-md:text-4xl max-md:leading-[53px]">
+          Nhà máy chuyên sản xuất nội thất chất lượng cao <br /> với thiết kế độc đáo và tiên tiến
+        </h1>
+        <p class="mt-7 max-md:max-w-full">
+          Nhà máy nội thất tiên tiến và sáng tạo, kết hợp công nghệ cao để sản xuất các sản phẩm độc đáo và chất lượng. Chuyên gia tại DTF tự hào về việc tạo ra những thiết kế thẩm mỹ và bền bỉ, phục vụ mọi nhu cầu của khách hàng. Với sự sáng tạo và tinh tế, nhà máy mang đến không gian sống hoàn hảo và đẳng cấp cho công trình.
+        </p>
+        <a href="#" class="flex gap-3.5 self-start px-9 py-3.5 mt-12 font-semibold bg-orange-400 rounded-[500px] max-md:px-5 max-md:mt-10">
+          <span class="my-auto">Xem thêm</span>
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/59ace08697c149296a2a9c257dce20f828afdbaa49ebf3def637474877d22161?apiKey=4ea98b4671db4e878c37ea9c15c28237&" alt="Arrow icon" class="shrink-0 w-4 aspect-square" />
+        </a>
+      </div>
+    </div>
+  </section>
+  <!--Form đăng ký-->
+  <section class="max-content py-20 flex flex-col px-5">
+    <h1 class="w-full text-5xl font-semibold text-blue-900 leading-[60px] max-md:max-w-full max-md:text-4xl">
+      Đăng ký nhận tư vấn từ DTF
+    </h1>
+    <p class="mt-7 w-full text-lg text-neutral-700 max-md:max-w-full">
+      Quý khách vui lòng liên hệ với DTF qua điện thoại, email hoặc điền vào mãu thông tin để được tư vấn.
+    </p>
+    <div class="mt-20 w-full max-md:mt-10 max-md:max-w-full">
+      <div class="flex gap-5 max-md:flex-col max-md:gap-0">
+        <figure class="flex flex-col w-[56%] max-md:ml-0 max-md:w-full">
+          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/c759435f6e5e2f1ab32b923436f9e2a93b7ab1ebc3ff8763b329df47527d216c?apiKey=4ea98b4671db4e878c37ea9c15c28237&" alt="" class="grow w-full aspect-[1.3] max-md:max-w-full" />
+        </figure>
+        <div class="flex flex-col ml-5 w-[44%] max-md:ml-0 max-md:w-full">
+          <form class="flex flex-col p-20 mt-24 w-full text-base bg-stone-200 text-neutral-700 text-opacity-50 max-md:px-5 max-md:mt-10 max-md:max-w-full">
+            <div class="flex gap-5 mx-4 mt-16 max-md:flex-wrap max-md:mt-10 max-md:mr-2.5 max-md:max-w-full">
+              <label for="name" class="sr-only">Họ tên</label>
+              <input type="text" id="name" placeholder="Họ tên" aria-label="Họ tên" class="justify-center items-start px-2.5 py-3 bg-white rounded-md max-md:pr-5" />
+              <label for="phone" class="sr-only">Số điện thoại</label>
+              <input type="tel" id="phone" placeholder="Số điện thoại" aria-label="Số điện thoại" class="justify-center items-start p-2.5 bg-white rounded-md max-md:pr-5" />
+            </div>
+            <label for="email" class="sr-only">Email</label>
+            <input type="email" id="email" placeholder="Email" aria-label="Email" class="justify-center items-start px-2.5 py-3.5 mx-4 mt-5 whitespace-nowrap bg-white rounded-md max-md:pr-5 max-md:mr-2.5 max-md:max-w-full" />
+            <div class="flex gap-5 px-3 py-2.5 mx-4 mt-5 bg-white rounded-md max-md:flex-wrap max-md:mr-2.5 max-md:max-w-full">
+              <span class="flex-auto">Tôi có thể nhận tư vấn vào ...</span>
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/4776946ddb1c0d5c3314848c37f4fd370439afa7882958d79b50ff01c4046e1b?apiKey=4ea98b4671db4e878c37ea9c15c28237&" alt="" class="shrink-0 self-start w-4 aspect-square" />
+            </div>
+            <button type="submit" class="flex gap-4 self-end px-7 py-3.5 mt-7 text-lg font-semibold text-white bg-orange-400 rounded-[500px] max-md:px-5 max-md:mr-2.5">
+              <span>Nhận tư vấn</span>
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/1c42535ee8e1689ac11dccbe6015902c23fbf964e0bea6c7117991c9acc5311e?apiKey=4ea98b4671db4e878c37ea9c15c28237&" alt="" class="shrink-0 self-start w-4 aspect-square" />
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--Footer-->
+  <section class="flex overflow-hidden relative flex-col justify-center min-h-[464px]">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cc7121df96ef0bff6a448306fe4a4db41e5bf3a3d6ae742b0699b563ccc5e38f?apiKey=4ea98b4671db4e878c37ea9c15c28237&" alt="" class="object-cover absolute inset-0 size-full" />
+    <div class="flex relative flex-col items-center px-5 pt-20 pb-5 w-full bg-black bg-opacity-80 max-md:max-w-full">
+      <div class="mt-4 w-full max-w-[1388px] max-md:max-w-full">
+        <div class="flex gap-5 max-md:flex-col max-md:gap-0">
+          <div class="flex flex-col w-[45%] max-md:ml-0 max-md:w-full">
+            <div class="flex flex-col grow items-start mt-1 max-md:mt-10 max-md:max-w-full">
+              <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/104ab8c08bdaf5e8f0174bf6649daa7391e212a3cdc0ff4f06e766ddec6f3b12?apiKey=4ea98b4671db4e878c37ea9c15c28237&" alt="DTF Việt Nam logo" class="max-w-full aspect-[2.86] w-[100px]" />
+              <h2 class="self-stretch mt-7 text-2xl font-semibold text-white max-md:max-w-full">
+                Công ty Cổ phần Thương mại Dịch vụ DTF Việt Nam
+              </h2>
+              <div class="flex gap-3.5 mt-8 text-3xl font-extrabold text-orange-400">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cac4da3e65728bae6f5d7c922c84f3753d3759aede5a11c9630b849b304c07ab?apiKey=4ea98b4671db4e878c37ea9c15c28237&" alt="" class="shrink-0 w-6 aspect-square" />
+                <a href="tel:1900988935" class="flex-auto">1900 988 935</a>
+              </div>
+              <div class="flex gap-3.5 mt-6">
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3759d68e994d8c21d15cb0299b7915ee5a0a53f669e39522174c5055d4d82680?apiKey=4ea98b4671db4e878c37ea9c15c28237&" alt="Facebook icon" class="shrink-0 w-6 aspect-square" />
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4d48d01527415fda32b15ac5d2edba25f8c4b28379abc702ddc0ebac389014c1?apiKey=4ea98b4671db4e878c37ea9c15c28237&" alt="YouTube icon" class="shrink-0 aspect-[0.96] w-[23px]" />
+                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b4ad1e2bab0737f1c7b2ddcbd7efc30f1b313f952882b0d979b19bbfadc4caea?apiKey=4ea98b4671db4e878c37ea9c15c28237&" alt="Instagram icon" class="shrink-0 aspect-[0.92] w-[22px]" />
+              </div>
+            </div>
+          </div>
+          <address class="flex flex-col ml-5 w-[26%] max-md:ml-0 max-md:w-full">
+            <div class="text-lg text-white uppercase max-md:mt-10">
+              <span class="font-semibold uppercase">Địa chỉ</span>
+              <br />
+              <span class="font-semibold">Trụ sở</span>
+              <br />
+              <span class="">Tầng 1A,Tháp C tòa Central Point,</span>
+              <br />
+              <span class="">219 Trung Kính, Yên Hòa, Cầu Giấy, Hà Nội</span>
+              <br />
+              <span class="font-semibold">Chi nhánh</span>
+              <br />
+              <span class="">Số 48 đường số 2, KDC Cityland,</span>
+              <br />
+              <span class="">Phường 7, Quận Gò Vấp, TP. Hồ Chí Minh</span>
+            </div>
+          </address>
+          <address class="flex flex-col ml-5 w-[29%] max-md:ml-0 max-md:w-full">
+            <div class="text-lg text-white uppercase max-md:mt-10">
+              <span class="font-semibold uppercase">Địa chỉ Nhà máy</span>
+              <br />
+              <span class="">Đường Đào Duy Tùng, Cổ Loa, Đông Anh, Hà Nội</span>
+              <br />
+              <span class="">Số 65 Ngô Quang Thắm, Ấp 2, Long Thới,</span>
+              <br />
+              <span class="">Nhà Bè, Hồ Chí Minh</span>
+              <br />
+            </div>
+          </address>
+        </div>
+      </div>
+      <hr class="self-stretch mt-28 w-full border border-solid bg-stone-300 bg-opacity-50 border-stone-300 border-opacity-50 min-h-[1px] max-md:mt-10 max-md:max-w-full" />
+      <div class="mt-5 text-base text-center text-white">
+        © Bản quyền © 2023 thuộc về DTF | Giữ toàn quyền
+      </div>
+    </div>
+  </section>
+    </main>  
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/tailwind_custom.js"></script>
+  </body>
+</html>
