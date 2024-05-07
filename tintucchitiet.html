@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <title>DTF</title>
+    <link rel="icon" type="image/png" href="" />
+    <link rel="stylesheet" href="/assets/css/reset.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/tintucchitiet.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!--SCRIPT-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<body>
+    <main>
+        <!--Header-->
+        <header class="bg-[#FFF]  fixed nav_header w-full shadow-lg z-20">
+            <div class="max-content flex items-stretch justify-between gap-5 md:px-0 py-2 max-md:flex-wrap px-5">
+                <a class="py-auto" href="/"><img loading="lazy" src="./assets/images/Logo.png"
+                        class="pt-[5px] md:pt-0 aspect-[1.82] object-contain object-center w-[80px] md:w-[100px] overflow-hidden shrink-0 max-w-full " />
+                </a>
+                <!--Header PC-->
+                <div
+                    class="hidden md:flex  items-center py-4 absolute z-50 bg-white top-16  right-[0px] justify-items-end justify-end items-end md:relative md:top-0 md:bg-transparent items-stretch  flex-col md:flex-row">
+                    <div class="nav__link text-pantone md:text-black text-25 leading-6 grow whitespace-nowrap">
+                        <a class="  mx-5 py-3 @(currentUrl.Contains(" gioi-thieu") ? "active" : "" ) "
+                 onclick=" printClickedElement(event)" href="">Trang chủ</a>
+                    </div>
+                    <div class="nav__link text-pantone md:text-black text-25 leading-6 grow whitespace-nowrap">
+                        <a class="  mx-5 py-3 @(currentUrl.Contains(" gioi-thieu") ? "active" : "" ) "
+                     onclick=" printClickedElement(event)" href="">Giới thiệu</a>
+                    </div>
+                    <!--Menu Sản phẩm - Dịch vụ-->
+                    <div class="menu relative">
+                        <li class="nav__link text-pantone md:text-black text-25 leading-6">
+                            <a class="mx-5 py-3 @(currentUrl.Contains(" dich-vu") ? "active" : "" )"
+                                onclick="printClickedElement(event)" href="">Sản phẩm & Dịch vụ</a>
+                        </li>
+                        <!-- Sub Menu -->
+                        <ul id="sub-menu"
+                            class="hidden sub-menu background_second transition py-2 flex flex-col  text-base font-semibold leading-6  rounded-lg  text-neutral-800">
+                            <li class="nav__link2 sub-menu-current relative py-2 pl-4">
+                                <a href="#" onclick="highlightParent(this)" class="">Thiết kế & Thi công nội thất </a>
+                                <!-- Sub-submenu -->
+                                <div class="sub-submenu hidden background_second transition shadow-lg rounded-lg">
+                                    <ul
+                                        class=" py-2 px-2 flex flex-col text-base font-semibold leading-6   text-neutral-800">
+                                        <li class="nav__link2 py-2 pl-4">
+                                            <a href="" onclick="highlightParent(this)" class="">Nội thất văn phòng</a>
+                                        </li>
+                                        <li class="nav__link2 py-2 pl-4">
+                                            <a href="" onclick="highlightParent(this)" class="">Nội thất Biệt thự - Nhà
+                                                riêng - Chung cư</a>
+                                        </li>
+                                        <li class="nav__link2 py-2 pl-4">
+                                            <a href="" onclick="highlightParent(this)" class="">Nội thất Nhà hàng - Cafe
+                                                - Bar</a>
+                                        </li>
+                                        <li class="nav__link2 py-2 pl-4">
+                                            <a href="#" onclick="highlightParent(this)" class="">Nội thất Trường học -
+                                                Mầm non</a>
+                                        </li>
+                                        <li class="nav__link2 py-2 pl-4">
+                                            <a href="" onclick="highlightParent(this)" class="">Nội thất Showroom</a>
+                                        </li>
+                                        <li class="nav__link2 py-2 pl-4">
+                                            <a href="" onclick="highlightParent(this)" class="">Nội thất Spa - Thẩm mĩ
+                                                viện</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav__link2 py-2 pl-4">
+                                <a href="#" onclick="highlightParent(this)" class="">Sản xuất nội thất gỗ</a>
+                            </li>
+                            <li class="nav__link2 py-2 pl-4">
+                                <a href="#" onclick="highlightParent(this)" class="">Bảo trì, bảo dưỡng</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!--Menu Dự án-->
+                    <div class="menu relative">
+                        <li class="nav__link text-pantone md:text-black text-25 leading-6">
+                            <a class="  mx-5 py-3 @(currentUrl.Contains(" du-an-hoan-thanh") ? "active" : "" ) "
+                     onclick=" printClickedElement(event)" href="">Dự án </a>
+                        </li>
+                        <ul style="width: 300px;"
+                            class="hidden sub-menu background_second py-2 px-[7px] flex flex-col  text-base font-semibold leading-6  rounded-lg shadow-lg text-neutral-800">
+                            <li class="nav__link2 sub-menu-current relative py-2 pl-4">
+                                <a href="" onclick="highlightParent(this)" class="">Nội thất văn phòng</a>
+                            </li>
+                            <li class="nav__link2 py-2 pl-4">
+                                <a href="" onclick="highlightParent(this)" class="">Nội thất Biệt thự - Nhà riêng -
+                                    Chung cư</a>
+                            </li>
+                            <li class="nav__link2 py-2 pl-4">
+                                <a href="" onclick="highlightParent(this)" class="">Nội thất Nhà hàng - Cafe - Bar</a>
+                            </li>
+                            <li class="nav__link2 py-2 pl-4">
+                                <a href="" onclick="highlightParent(this)" class="">Nội thất Trường học - Mầm non</a>
+                            </li>
+                            <li class="nav__link2 py-2 pl-4">
+                                <a href="" onclick="highlightParent(this)" class="">Nội thất Showroom</a>
+                            </li>
+                            <li class="nav__link2 py-2 pl-4">
+                                <a href="" onclick="highlightParent(this)" class="">Nội thất Spa - Thẩm mĩ viện</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="nav__link text-pantone md:text-black text-25 leading-6">
+                        <a class="  mx-5 @(currentUrl.Contains(" du-an-hoan-thanh") ? "active" : "" ) "
+                   onclick=" printClickedElement(event)" href="">Nhà máy</a>
+                    </div>
+                    <div class="nav__link text-pantone md:text-black text-25 leading-6">
+                        <a class="  mx-5 @(currentUrl.Contains(" tin-tuc") ? "active" : "" ) "
+                     onclick=" printClickedElement(event)" href="">Tin tức</a>
+                    </div>
+                    <div class="nav__link text-pantone md:text-black text-25 leading-6">
+                        <a class="  mx-5 @(currentUrl.Contains(" tuyen-dung") ? "active" : "" ) "
+                     onclick=" printClickedElement(event)" href="">Tuyển dụng</a>
+                    </div>
+                    <div class="nav__link  text-pantone md:text-black text-25 leading-6 grow whitespace-nowrap">
+                        <a class="  mx-5 @(currentUrl.Contains(" lien-he") ? "active" : "" ) "
+                     onclick=" printClickedElement(event)" href="">Liên hệ</a>
+                    </div>
+                </div>
+
+                <div class="self-center flex items-stretch gap-1 my-auto hidden md:flex ">
+                    <button>
+                        <img loading="lazy" src="./assets/images/search 1.png"
+                            class="aspect-[0.71] object-contain object-center w-[18px] overflow-hidden shrink-0 max-w-full" />
+                    </button>
+                    <div class="mx-2">|</div>
+                    <button class="flex gap-2">
+                        <img loading="lazy" src="./assets/images/vietnam 1.png"
+                            class="aspect-[0.71] object-contain object-center w-[18px] overflow-hidden shrink-0 max-w-full" />
+                        <img loading="lazy" src="./assets/images/downward-arrow 3.png"
+                            class="pt-1 aspect-[0.71] object-contain object-center w-[18px] overflow-hidden shrink-0 max-w-full" />
+                    </button>
+                </div>
+
+                <!--Header mobile-->
+                <div class="block md:hidden">
+                    <!--Menu-->
+                    <div id="open_menu" onclick="openModal()"
+                        class="min-sm:block md:block lg:hidden  cursor-pointer pt-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <g clip-path="url(#clip0_372_1645)">
+                                <path fill="#222"
+                                    d="M23 10.9998H1C0.447715 10.9998 0 11.4475 0 11.9998C0 12.552 0.447715 12.9998 1 12.9998H23C23.5523 12.9998 24 12.552 24 11.9998C24 11.4475 23.5523 10.9998 23 10.9998Z"
+                                    fill="white" />
+                                <path fill="#222"
+                                    d="M23 4.00024H1C0.447715 4.00024 0 4.44796 0 5.00024C0 5.55253 0.447715 6.00024 1 6.00024H23C23.5523 6.00024 24 5.55253 24 5.00024C24 4.44796 23.5523 4.00024 23 4.00024Z"
+                                    fill="white" />
+                                <path fill="#222"
+                                    d="M23 18H1C0.447715 18 0 18.4477 0 19C0 19.5523 0.447715 20 1 20H23C23.5523 20 24 19.5523 24 19C24 18.4477 23.5523 18 23 18Z"
+                                    fill="white" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_372_1645">
+                                    <rect width="24" height="24" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+                    <!--Modal-->
+                    <div class="modal hidden" id="modalContainer">
+                        <div id="close_menu" class="pt-2 hidden" onclick="closeModalMobile()">
+                            <svg width="32" height="32" viewBox="0 0 16 16" fill="#222"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.99999 7.05732L11.3 3.75732L12.2427 4.69999L8.94266 7.99999L12.2427 11.3L11.3 12.2427L7.99999 8.94266L4.69999 12.2427L3.75732 11.3L7.05732 7.99999L3.75732 4.69999L4.69999 3.75732L7.99999 7.05732Z"
+                                    fill="#222" />
+                            </svg>
+                        </div>
+                        <div
+                            class="h-screen mt-[5px] p-8 absolute z-50 bg-white top-14 left-0 right-0 md:relative md:top-0 md:bg-transparent items-stretch flex flex-col md:flex-row gap-5">
+                            <div class="text-gray-700  text-[18px] font-medium leading-6  whitespace-nowrap">
+                                <a onclick="closeModalMobile()" href="/">
+                                    Trang chủ
+                                </a>
+                            </div>
+                            <div class="text-gray-700  text-[18px] font-medium leading-6 leading-6">
+                                <a onclick="closeModalMobile()" href="">
+                                    Giới thiệu
+                                </a>
+                            </div>
+                            <div class="menu relative">
+                                <div class="text-gray-700  text-[18px] font-medium leading-6 leading-6">
+                                    <li onclick="closeModalMobile()">
+                                        Sản phẩm & Dịch vụ
+                                    </li>
+                                </div>
+                                <!-- Sub Menu -->
+                                <ul id="sub-menu"
+                                    class="hidden sub-menu transition background_second  py-2 flex flex-col  text-base font-semibold leading-6 rounded-lg border border-gray-100 border-solid shadow-lg text-neutral-800">
+                                    <li class="nav__link2 sub-menu-current relative py-2 pl-4">
+                                        <a href="#" onclick="highlightParent(this)" class="text-[18px]">Thiết kế & Thi
+                                            công nội thất </a>
+                                        <!-- Sub-submenu -->
+                                        <div
+                                            class="sub-submenu hidden transition rounded-lg shadow-lg background_second ">
+                                            <ul style="width: 300px;"
+                                                class="py-2 px-2 flex flex-col text-base font-semibold leading-6 text-neutral-800">
+                                                <li class="nav__link2 py-2 pl-4">
+                                                    <a href="" onclick="highlightParent(this)" class="text-[18px]">Nội
+                                                        thất văn phòng</a>
+                                                </li>
+                                                <li class="nav__link2 py-2 pl-4">
+                                                    <a href="" onclick="highlightParent(this)" class="text-[18px]">Nội
+                                                        thất Biệt thự - Nhà riêng - Chung cư</a>
+                                                </li>
+                                                <li class="nav__link2 py-2 pl-4">
+                                                    <a href="" onclick="highlightParent(this)" class="text-[18px]">Nội
+                                                        thất Nhà hàng - Cafe - Bar</a>
+                                                </li>
+                                                <li class="nav__link2 py-2 pl-4">
+                                                    <a href="#" onclick="highlightParent(this)" class="text-[18px]">Nội
+                                                        thất Trường học - Mầm non</a>
+                                                </li>
+                                                <li class="nav__link2 py-2 pl-4">
+                                                    <a href="" onclick="highlightParent(this)" class="text-[18px]">Nội
+                                                        thất Showroom</a>
+                                                </li>
+                                                <li class="nav__link2 py-2 pl-4">
+                                                    <a href="" onclick="highlightParent(this)" class="text-[18px]">Nội
+                                                        thất Spa - Thẩm mĩ viện</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="nav__link2 py-2 pl-4">
+                                        <a href="#" onclick="highlightParent(this)" class="text-[18px]">Sản xuất nội
+                                            thất gỗ</a>
+                                    </li>
+                                    <li class="nav__link2 py-2 pl-4">
+                                        <a href="#" onclick="highlightParent(this)" class="text-[18px]">Bảo trì, bảo
+                                            dưỡng</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="menu relative">
+                                <div class="text-gray-700  text-[18px] font-medium leading-6 leading-6">
+                                    <li onclick="closeModalMobile()" href="">
+                                        Dự án
+                                    </li>
+                                    <ul style="width: 300px;"
+                                        class="hidden sub-menu background_second py-2 px-[7px] flex flex-col  text-base font-semibold leading-6  rounded-lg shadow-lg text-neutral-800">
+                                        <li class="nav__link2 sub-menu-current relative py-2 pl-4">
+                                            <a href="" onclick="highlightParent(this)" class="">Nội thất văn phòng</a>
+                                        </li>
+                                        <li class="nav__link2 py-2 pl-4">
+                                            <a href="" onclick="highlightParent(this)" class="">Nội thất Biệt thự - Nhà
+                                                riêng - Chung cư</a>
+                                        </li>
+                                        <li class="nav__link2 py-2 pl-4">
+                                            <a href="" onclick="highlightParent(this)" class="">Nội thất Nhà hàng - Cafe
+                                                - Bar</a>
+                                        </li>
+                                        <li class="nav__link2 py-2 pl-4">
+                                            <a href="" onclick="highlightParent(this)" class="">Nội thất Trường học -
+                                                Mầm non</a>
+                                        </li>
+                                        <li class="nav__link2 py-2 pl-4">
+                                            <a href="" onclick="highlightParent(this)" class="">Nội thất Showroom</a>
+                                        </li>
+                                        <li class="nav__link2 py-2 pl-4">
+                                            <a href="" onclick="highlightParent(this)" class="">Nội thất Spa - Thẩm mĩ
+                                                viện</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="text-gray-700  text-[18px] font-medium leading-6  whitespace-nowrap">
+                                <a onclick="closeModalMobile()" href="">
+                                    Tin tức
+                                </a>
+                            </div>
+                            <div class="text-gray-700  text-[18px] font-medium leading-6  whitespace-nowrap">
+                                <a onclick="closeModalMobile()" href="">
+                                    Tuyển dụng
+                                </a>
+                            </div>
+                            <div class="text-gray-700  text-[18px] font-medium leading-6  whitespace-nowrap">
+                                <a onclick="closeModalMobile()" href="">
+                                    Liên hệ
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </header>
+        <!--Banner-->
+        <section class="banner-contents">
+            <div
+                class="flex overflow-hidden relative flex-col justify-center items-start py-24	 text-2  xl min-h-[75px] text-neutral-700 max-md:px-5">
+                <img loading="lazy" src="./assets/images/tintuc/slidechitiet.png"
+                    class="object-cover absolute inset-0 w-full h-[150px]" />
+                <div class="content-in-banner flex relative gap-3.5 max-md:flex-wrap">
+                    <div class="nav__link text-pantone md:text-black text-25 leading-6">
+                        <a href="tintuc.html">Tin tức</a>
+
+
+                    </div>
+                    <i class="arrow-tintuc fa-solid fa-arrow-right"></i>
+                    <div class="nav__link text-pantone md:text-black text-25 leading-6 font-bold">
+                        <a href="tintucchitiet.html">Xu hướng thiết kế nội thất mới nhất 2024</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Sub nav-->
+        <!--Giới thiệu chung-->
+
+
+        <section class="chitiet-contents flex max-content">
+            <div
+                class="flex flex-col px-10 py-16 text-lg border border-solid border-neutral-300 max-w-[800px] text-neutral-700 max-md:px-5">
+                <div class="text-3xl font-bold text-blue-900 leading-[60px] max-md:max-w-full">
+                    Xu hướng thiết kế nội thất mới nhất 2024
+                </div>
+                <div class="flex gap-5 justify-between mt-9 w-full leading-6 max-md:flex-wrap max-md:max-w-full">
+                    <div class="flex gap-2.5">
+                        <img loading="lazy" src="./assets/images/tintuc/mykingdom.png"
+                            class="shrink-0 aspect-square rounded-[500px] w-[50px] h-[50px]" />
+
+                        <div class="my-auto">
+                            <span class="text-sm">Đăng ngày</span>
+                            <br />
+                            <span class="font-bold">07.04.2024</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-2.5">
+                        <img loading="lazy" src="./assets/images/tintuc/quatuyetvoi.png"
+                            class="shrink-0 aspect-square rounded-[500px] w-[55px] h-[50px]" />
+                        <div class="my-auto">
+                            <span class="text-sm">Đăng bởi</span>
+                            <br />
+                            <span class="font-bold">Như Tâm</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-2.5">
+                        <img loading="lazy" src="./assets/images/tintuc/tuyetvoiqua.png"
+                            class="shrink-0 aspect-square rounded-[500px] w-[50px] h-[50px]" />
+                        <div class="my-auto">
+                            <span class="text-sm">Chuyên mục</span>
+                            <br />
+                            <span class="font-bold">Tin tức</span>
+                        </div>
+                    </div>
+                    <div
+                        class="flex gap-2 self-start px-9 py-3.5 font-semibold text-white bg-orange-400 rounded-[500px] max-md:px-5">
+                        <img loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/35bf81b135141181bf8d2924d9ef720873865d0746c883a7d2557636bdef9a4b?"
+                            class="shrink-0 self-start w-4 aspect-square" />
+                        <div>Copy link</div>
+                    </div>
+                </div>
+                <div
+                    class="shrink-0 mt-12 h-px border border-solid bg-stone-300 border-stone-300 max-md:mt-10 max-md:max-w-full">
+                </div>
+                <div class="mt-14 max-md:mt-10 max-md:max-w-full">
+                    <span class="text-2xl font-bold">Lorem Ipsum is simply dummy</span>
+                    <br />
+                    <br />
+                    <span class="">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the
+                        1500s, when an unknown printer took a galley of type and scrambled it to
+                        make a type specimen book. It has survived not only five centuries, but
+                        also the leap into electronic typesetting, remaining essentially
+                        unchanged. It was popularised in the.
+                    </span>
+                    <br />
+                    <br />
+                    <span class="text-2xl font-bold">Lorem Ipsum is simply dummy</span>
+                    <br />
+                    <br />
+                    <span class="">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the
+                        1500s, when an unknown printer took a galley of type and scrambled it to
+                        make a type specimen book. It has survived not only five centuries, but
+                        also the leap into electronic typesetting, remaining essentially
+                        unchanged. It was popularised in the
+                    </span>
+                    <br />
+                    <br />
+                    <span class="text-2xl font-bold">Lorem Ipsum is simply dummy</span>
+                    <br />
+                    <br />
+                    <span class="">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been the industry's standard dummy text ever since the
+                        1500s, when an unknown printer took a galley of type and scrambled it to
+                        make a type specimen book. It has survived not only five centuries, but
+                        also the leap into electronic typesetting, remaining essentially
+                        unchanged. It was popularised in the. Lorem Ipsum is simply dummy text of
+                        the printing and typesetting industry. Lorem Ipsum has been the industry's
+                        standard dummy text ever since the 1500s, when an unknown printer took a
+                        galley of type and scrambled it to make a type specimen book. It has
+                        survived not only five centuries, but also the leap into electronic
+                        typesetting, remaining essentially unchanged. It was popularised in the
+                    </span>
+                </div>
+            </div>
+
+            <div class="px-12 py-11 bg-neutral-100 max-w-[480px] h-[790px]">
+
+                <div class=" gap-5  max-md:gap-0">
+
+                    <div class="self-stretch text-lg font-extrabold text-neutral-700">TIN TỨC KHÁC</div>
+
+
+                    <div
+                        class=" self-stretch my-auto text-lg font-medium leading-6 text-blue-900 flex items-center pt-4">
+                        <img loading="lazy" srcset="./assets/images/tintuc/anhtrongcontent.png"
+                            class="aspect-[1.39] w-[140px] mr-3" />
+                        <div class="content-layout">
+                            <div>Xu hướng thiết kế nội thất mới nhất 2024</div>
+
+
+                            <div class="flex gap-1.5 mt-3.5 text-sm whitespace-nowrap text-neutral-700 text-opacity-70">
+                                <img loading="lazy" src="./assets/images/tintuc/Vectortintuc.png "
+                                    class="shrink-0 aspect-square w-[15px] h-[19px]" />
+                                <div class="flex-auto">07.04.2024</div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div
+                        class=" self-stretch my-auto text-lg font-medium leading-6 text-blue-900 flex items-center pt-4">
+                        <img loading="lazy" srcset="./assets/images/tintuc/anhtrongcontent.png"
+                            class="aspect-[1.39] w-[140px] mr-3" />
+                        <div class="content-layout">
+                            <div>Xu hướng thiết kế nội thất mới nhất 2024</div>
+
+
+                            <div class="flex gap-1.5 mt-3.5 text-sm whitespace-nowrap text-neutral-700 text-opacity-70">
+                                <img loading="lazy" src="./assets/images/tintuc/Vectortintuc.png "
+                                    class="shrink-0 aspect-square w-[15px] h-[19px]" />
+                                <div class="flex-auto">07.04.2024</div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div
+                        class=" self-stretch my-auto text-lg font-medium leading-6 text-blue-900 flex items-center pt-4">
+                        <img loading="lazy" srcset="./assets/images/tintuc/anhtrongcontent.png"
+                            class="aspect-[1.39] w-[140px] mr-3" />
+                        <div class="content-layout">
+                            <div>Xu hướng thiết kế nội thất mới nhất 2024</div>
+
+
+                            <div class="flex gap-1.5 mt-3.5 text-sm whitespace-nowrap text-neutral-700 text-opacity-70">
+                                <img loading="lazy" src="./assets/images/tintuc/Vectortintuc.png "
+                                    class="shrink-0 aspect-square w-[15px] h-[19px]" />
+                                <div class="flex-auto">07.04.2024</div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div
+                        class=" self-stretch my-auto text-lg font-medium leading-6 text-blue-900 flex items-center pt-4">
+                        <img loading="lazy" srcset="./assets/images/tintuc/anhtrongcontent.png"
+                            class="aspect-[1.39] w-[140px] mr-3" />
+                        <div class="content-layout">
+                            <div>Xu hướng thiết kế nội thất mới nhất 2024</div>
+
+
+                            <div class="flex gap-1.5 mt-3.5 text-sm whitespace-nowrap text-neutral-700 text-opacity-70">
+                                <img loading="lazy" src="./assets/images/tintuc/Vectortintuc.png "
+                                    class="shrink-0 aspect-square w-[15px] h-[19px]" />
+                                <div class="flex-auto">07.04.2024</div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div
+                        class=" self-stretch my-auto text-lg font-medium leading-6 text-blue-900 flex items-center pt-4">
+                        <img loading="lazy" srcset="./assets/images/tintuc/anhtrongcontent.png"
+                            class="aspect-[1.39] w-[140px] mr-3" />
+                        <div class="content-layout">
+                            <div>Xu hướng thiết kế nội thất mới nhất 2024</div>
+
+
+                            <div class="flex gap-1.5 mt-3.5 text-sm whitespace-nowrap text-neutral-700 text-opacity-70">
+                                <img loading="lazy" src="./assets/images/tintuc/Vectortintuc.png "
+                                    class="shrink-0 aspect-square w-[15px] h-[19px]" />
+                                <div class="flex-auto">07.04.2024</div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </section>
+
+
+
+
+
+        <!-- Footer -->
+
+
+
+    </main>
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/tailwind_custom.js"></script>
+</body>
+
+</html>
