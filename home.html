@@ -36,7 +36,7 @@
                 <div
                     class="hidden md:flex  items-center py-4 absolute z-50 bg-white top-16  right-[0px] justify-items-end justify-end items-end md:relative md:top-0 md:bg-transparent items-stretch  flex-col md:flex-row">
                     <div class="nav__link text-pantone md:text-black text-25 leading-6 grow whitespace-nowrap">
-                        <a class="  mx-5 py-3 @(currentUrl.Contains(" gioi-thieu") ? "active" : "" ) "
+                        <a class="  mx-5 py-3  @(currentUrl.Contains(" gioi-thieu") ? "active" : "" ) "
                  onclick=" printClickedElement(event)" href="">Trang chủ</a>
                     </div>
                     <div class="nav__link text-pantone md:text-black text-25 leading-6 grow whitespace-nowrap">
@@ -44,16 +44,20 @@
                      onclick=" printClickedElement(event)" href="">Giới thiệu</a>
                     </div>
                     <!--Menu Sản phẩm - Dịch vụ-->
-                    <div class="menu relative">
-                        <li class="nav__link text-pantone md:text-black text-25 leading-6">
-                            <a class="mx-5 py-3 @(currentUrl.Contains(" dich-vu") ? "active" : "" )"
-                                onclick="printClickedElement(event)" href="">Sản phẩm & Dịch vụ</a>
+                    <div class="menu relative ">
+                        <li class="nav__link relative text-pantone md:text-black text-25 leading-6">
+                            <a class="  mx-7 py-4 @(currentUrl.Contains(" du-an-hoan-thanh") ? "active" : "" ) "
+                     onclick=" printClickedElement(event)" href="">Sản phẩm & Dịch vụ
+                     <i class="fa-solid fa-sort-down pl-2 absolute top-0"></i></a>
                         </li>
                         <!-- Sub Menu -->
                         <ul id="sub-menu"
                             class="hidden sub-menu background_second transition py-2 flex flex-col  text-base font-semibold leading-6  rounded-lg  text-neutral-800">
                             <li class="nav__link2 sub-menu-current relative py-2 pl-4">
-                                <a href="#" onclick="highlightParent(this)" class="">Thiết kế & Thi công nội thất </a>
+                                <div class="flex justify-between">
+                                <a href="#" onclick="highlightParent(this)" class="">Thiết kế & Thi công nội thất</a>
+                                <i class="fa-solid fa-sort-down pl-4 pr-3"></i>
+                              </div>
                                 <!-- Sub-submenu -->
                                 <div class="sub-submenu hidden background_second transition shadow-lg rounded-lg">
                                     <ul
@@ -83,20 +87,23 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="nav__link2 py-2 pl-4">
+                            <li class="nav__link2 flex justify-between py-2 pl-4">
                                 <a href="#" onclick="highlightParent(this)" class="">Sản xuất nội thất gỗ</a>
+                                <i class="fa-solid fa-sort-down pl-6 pr-3"></i>
                             </li>
-                            <li class="nav__link2 py-2 pl-4">
+                            <li class="nav__link2 flex justify-between py-2 pl-4">
                                 <a href="#" onclick="highlightParent(this)" class="">Bảo trì, bảo dưỡng</a>
+                                <i class="fa-solid fa-sort-down pl-6 pr-3 "></i>
                             </li>
                         </ul>
                     </div>
 
                     <!--Menu Dự án-->
                     <div class="menu relative">
-                        <li class="nav__link text-pantone md:text-black text-25 leading-6">
-                            <a class="  mx-5 py-3 @(currentUrl.Contains(" du-an-hoan-thanh") ? "active" : "" ) "
-                     onclick=" printClickedElement(event)" href="">Dự án </a>
+                        <li class="nav__link relative text-pantone md:text-black text-25 leading-6">
+                            <a class="  mx-7 py-4 @(currentUrl.Contains(" du-an-hoan-thanh") ? "active" : "" ) "
+                     onclick=" printClickedElement(event)" href="">Dự án 
+                     <i class="fa-solid fa-sort-down pl-2 absolute top-0"></i></a>
                         </li>
                         <ul style="width: 300px;"
                             class="hidden sub-menu background_second py-2 px-[7px] flex flex-col  text-base font-semibold leading-6  rounded-lg shadow-lg text-neutral-800">
@@ -148,8 +155,7 @@
                     <button class="flex gap-2">
                         <img loading="lazy" src="./assets/images/vietnam 1.png"
                             class="aspect-[0.71] object-contain object-center w-[18px] overflow-hidden shrink-0 max-w-full" />
-                        <img loading="lazy" src="./assets/images/downward-arrow 3.png"
-                            class="pt-1 aspect-[0.71] object-contain object-center w-[18px] overflow-hidden shrink-0 max-w-full" />
+                            <i class="fa-solid fa-sort-down pl-2 "></i>
                     </button>
                 </div>
 
@@ -188,7 +194,7 @@
                             </svg>
                         </div>
                         <div
-                            class="h-screen mt-[5px] p-8 absolute z-50 bg-white top-14 left-0 right-0 md:relative md:top-0 md:bg-transparent items-stretch flex flex-col md:flex-row gap-5">
+                            class="h-screen mt-[4px] p-8 absolute z-50 bg-white top-14 left-0 right-0 md:relative md:top-0 md:bg-transparent items-stretch flex flex-col md:flex-row gap-5">
                             <div class="text-gray-700  text-[18px] font-medium leading-6  whitespace-nowrap">
                                 <a onclick="closeModalMobile()" href="/">
                                     Trang chủ
@@ -305,21 +311,21 @@
                 </div>
             </div>
         </header>
-        <!--Banner-->
-        <section id="banner" class="z-10 flex-col items-stretch overflow-hidden justify-center pt-[62px] md:pt-[72px]">
-            <div class="swiper mySwiper">
+        <!--Banner-->   
+        <section id="banner" class="z-30 flex-col items-stretch overflow-hidden justify-center pt-[62px] md:pt-[72px]">
+            <div class="swiper mySwiper_mb">
                 <div class="swiper-wrapper">
 
                     <div class="swiper-slide">
                         <a href=@Url.Content(item.Link) target="_blank">
-                            <img class="z-1 banner-img w-full object-cover inset-0 blur-image"
-                                src="./assets/images/Banner_home.png" alt="" />
+                            <img class="z-1 banner-img w-full object-cover inset-0 blur-image_banner"
+                                src="./assets/images/Ảnh 2.png" alt="" />
                         </a>
                         <div style="width:100vw; height:100vh"
                             class=" absolute top-0 left-0 bg-black bg-opacity-30 flex flex-col items-stretch"></div>
                         <div class="banner-content ">
                             <p class="banner-title "></p>
-                            <p class="banner-title uppercase "></p>
+                            <p class="banner-title uppercase ">DTF - Đơn vị thiết kế, thi công nội thất uy tín hàng đầu Việt Nam</p>
                         </div>
                     </div>
 
@@ -329,12 +335,11 @@
                 <div class="swiper-button-prev"></div>
             </div>
         </section>
-
         <!--Giới thiệu chung-->
         <section class="max-content py-10 md:py-20 md:px-0 px-5">
             <div class="flex gap-5 max-md:flex-col max-md:gap-0">
                 <div class="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
-                    <article class="flex flex-col px-0 md:px-5 text-lg font-semibold max-md:mt-1 max-md:max-w-full">
+                    <article class="flex flex-col px-0  text-lg font-semibold max-md:mt-1 max-md:max-w-full">
                         <div
                             class="shrink-0 h-[0.5px] bg-orange-400 border-2 md:border-4 border-[#FCB040] border-solid max-md:max-w-full w-[100px] md:w-[150px]">
                         </div>
