@@ -5,18 +5,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-    <title>Tin tức</title>
+    <title>Trang chủ</title>
     <link rel="icon" type="image/png" href="" />
+    <!--font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@100..800&display=swap" rel="stylesheet">
+    <!--css-->
     <link rel="stylesheet" href="/assets/css/reset.css" />
     <link rel="stylesheet" href="/assets/css/style.css" />
     <link rel="stylesheet" href="/assets/css/ngoc.css" />
     <link rel="stylesheet" href="/assets/css/tintuc.css" />
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <!--SCRIPT-->
+    <!--script-->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -33,7 +37,7 @@
                 <div
                     class="hidden md:flex  items-center py-4 absolute z-50 bg-white top-16  right-[0px] justify-items-end justify-end items-end md:relative md:top-0 md:bg-transparent items-stretch  flex-col md:flex-row">
                     <div class="nav__link text-pantone md:text-black text-25 leading-6 grow whitespace-nowrap">
-                        <a class="  mx-5 py-3 @(currentUrl.Contains(" gioi-thieu") ? "active" : "" ) "
+                        <a class="  mx-5 py-3  @(currentUrl.Contains(" gioi-thieu") ? "active" : "" ) "
                  onclick=" printClickedElement(event)" href="">Trang chủ</a>
                     </div>
                     <div class="nav__link text-pantone md:text-black text-25 leading-6 grow whitespace-nowrap">
@@ -41,16 +45,21 @@
                      onclick=" printClickedElement(event)" href="">Giới thiệu</a>
                     </div>
                     <!--Menu Sản phẩm - Dịch vụ-->
-                    <div class="menu relative">
-                        <li class="nav__link text-pantone md:text-black text-25 leading-6">
-                            <a class="mx-5 py-3 @(currentUrl.Contains(" dich-vu") ? "active" : "" )"
-                                onclick="printClickedElement(event)" href="">Sản phẩm & Dịch vụ</a>
+                    <div class="menu relative ">
+                        <li class="nav__link relative text-pantone md:text-black text-25 leading-6">
+                            <a class="  mx-7 py-4 @(currentUrl.Contains(" du-an-hoan-thanh") ? "active" : "" ) "
+                     onclick=" printClickedElement(event)" href="">Sản phẩm & Dịch vụ
+                                <i class="fa-solid fa-sort-down pl-2 absolute top-0"></i></a>
                         </li>
                         <!-- Sub Menu -->
                         <ul id="sub-menu"
                             class="hidden sub-menu background_second transition py-2 flex flex-col  text-base font-semibold leading-6  rounded-lg  text-neutral-800">
                             <li class="nav__link2 sub-menu-current relative py-2 pl-4">
-                                <a href="#" onclick="highlightParent(this)" class="">Thiết kế & Thi công nội thất </a>
+                                <div class="flex justify-between">
+                                    <a href="#" onclick="highlightParent(this)" class="">Thiết kế & Thi công nội
+                                        thất</a>
+                                    <i class="fa-solid fa-sort-down pl-4 pr-3"></i>
+                                </div>
                                 <!-- Sub-submenu -->
                                 <div class="sub-submenu hidden background_second transition shadow-lg rounded-lg">
                                     <ul
@@ -80,20 +89,23 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="nav__link2 py-2 pl-4">
+                            <li class="nav__link2 flex justify-between py-2 pl-4">
                                 <a href="#" onclick="highlightParent(this)" class="">Sản xuất nội thất gỗ</a>
+                                <i class="fa-solid fa-sort-down pl-6 pr-3"></i>
                             </li>
-                            <li class="nav__link2 py-2 pl-4">
+                            <li class="nav__link2 flex justify-between py-2 pl-4">
                                 <a href="#" onclick="highlightParent(this)" class="">Bảo trì, bảo dưỡng</a>
+                                <i class="fa-solid fa-sort-down pl-6 pr-3 "></i>
                             </li>
                         </ul>
                     </div>
 
                     <!--Menu Dự án-->
                     <div class="menu relative">
-                        <li class="nav__link text-pantone md:text-black text-25 leading-6">
-                            <a class="  mx-5 py-3 @(currentUrl.Contains(" du-an-hoan-thanh") ? "active" : "" ) "
-                     onclick=" printClickedElement(event)" href="">Dự án </a>
+                        <li class="nav__link relative text-pantone md:text-black text-25 leading-6">
+                            <a class="  mx-7 py-4 @(currentUrl.Contains(" du-an-hoan-thanh") ? "active" : "" ) "
+                     onclick=" printClickedElement(event)" href="">Dự án
+                                <i class="fa-solid fa-sort-down pl-2 absolute top-0"></i></a>
                         </li>
                         <ul style="width: 300px;"
                             class="hidden sub-menu background_second py-2 px-[7px] flex flex-col  text-base font-semibold leading-6  rounded-lg shadow-lg text-neutral-800">
@@ -145,8 +157,7 @@
                     <button class="flex gap-2">
                         <img loading="lazy" src="./assets/images/vietnam 1.png"
                             class="aspect-[0.71] object-contain object-center w-[18px] overflow-hidden shrink-0 max-w-full" />
-                        <img loading="lazy" src="./assets/images/downward-arrow 3.png"
-                            class="pt-1 aspect-[0.71] object-contain object-center w-[18px] overflow-hidden shrink-0 max-w-full" />
+                        <i class="fa-solid fa-sort-down pl-2 "></i>
                     </button>
                 </div>
 
@@ -185,7 +196,7 @@
                             </svg>
                         </div>
                         <div
-                            class="h-screen mt-[5px] p-8 absolute z-50 bg-white top-14 left-0 right-0 md:relative md:top-0 md:bg-transparent items-stretch flex flex-col md:flex-row gap-5">
+                            class="h-screen mt-[4px] p-8 absolute z-50 bg-white top-14 left-0 right-0 md:relative md:top-0 md:bg-transparent items-stretch flex flex-col md:flex-row gap-5">
                             <div class="text-gray-700  text-[18px] font-medium leading-6  whitespace-nowrap">
                                 <a onclick="closeModalMobile()" href="/">
                                     Trang chủ
@@ -303,20 +314,21 @@
             </div>
         </header>
         <!--Banner-->
-        <section id="banner" class="z-10 flex-col items-stretch overflow-hidden justify-center pt-[62px] md:pt-[72px]">
-            <div class="swiper mySwiper">
+        <section id="banner" class="z-30 flex-col items-stretch overflow-hidden justify-center pt-[62px] md:pt-[72px]">
+            <div class="swiper mySwiper_mb">
                 <div class="swiper-wrapper">
 
                     <div class="swiper-slide">
                         <a href=@Url.Content(item.Link) target="_blank">
-                            <img class="z-1 banner-img w-full object-cover inset-0 blur-image"
-                                src="./assets/images/Banner_home.png" alt="" />
+                            <img class="z-1 banner-img w-full object-cover inset-0 blur-image_banner"
+                                src="./assets/images/Ảnh 2.png" alt="" />
                         </a>
                         <div style="width:100vw; height:100vh"
                             class=" absolute top-0 left-0 bg-black bg-opacity-30 flex flex-col items-stretch"></div>
                         <div class="banner-content ">
                             <p class="banner-title "></p>
-                            <p class="banner-title uppercase "></p>
+                            <p class="banner-title uppercase ">DTF - Đơn vị thiết kế, thi công nội thất uy tín hàng đầu
+                                Việt Nam</p>
                         </div>
                     </div>
 
@@ -324,19 +336,6 @@
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
-            </div>
-        </section>
-        <!--Sub nav-->
-        <section class=" bg-[#E9E4E1]">
-            <div class="max-content">
-                <ul class="hidden md:flex justify-between gap-5 py-5">
-                    <li><a>Trang chủ</a></li>
-                    <li><a>Thư ngỏ</a></li>
-                    <li><a>Lĩnh vực hoạt động</a></li>
-                    <li><a>Lịch sử hình thành</a></li>
-                    <li><a>Tầm nhìn - Sứ mệnh - Giá trị cốt lõi</a></li>
-                    <li><a>Nhà máy sản xuất</a></li>
-                </ul>
             </div>
         </section>
         <!--Giới thiệu chung-->
@@ -347,12 +346,14 @@
             <swiper-container class="myTintuc pt-20 " init="false">
                 <swiper-slide class="content-swiper1 flex flex-col px-5 w-[1280px] mx-auto  ">
                     <div class="flex flex-col px-5 ">
-                        <div class="img-center">
-                            <img src="./assets/images/tintuc/Line.png" alt="">
-                        </div>
                         <div
-                            class="text-4xl font-bold text-blue-900 leading-[60px] max-md:max-w-full max-md:text-4xl text-left pt-4 ">
+                            class=" shrink-0 h-[0.5px] bg-orange-400 border-2 md:border-4 border-[#FCB040] border-solid max-md:max-w-full w-[100px] md:w-[150px]">
+                        </div>
+                        <div class=" text-4xl font-bold text-blue-900 leading-[60px] max-md:max-w-full max-md:text-4xl text-left pt-4"
+                            style="text-shadow: grey 0px 2px 4px">
+
                             Tin tức cập nhật
+
                         </div>
 
 
@@ -366,7 +367,7 @@
                                         </a>
                                         <a href="./tintucchitiet.html">
                                             <div
-                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full">
+                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full" style="text-shadow: grey 0px 3px 5px">
                                                 Xu hướng thiết kế nội thất mới nhất 2024
                                             </div>
                                         </a>
@@ -391,8 +392,8 @@
                                                 class="w-full aspect-[1.69] max-md:max-w-full" />
                                         </a>
                                         <a href="./tintucchitiet.html">
-                                            <div
-                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full">
+                                                                                        <div
+                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full" style="text-shadow: grey 0px 3px 5px">
                                                 Xu hướng thiết kế nội thất mới nhất 2024
                                             </div>
                                         </a>
@@ -416,8 +417,8 @@
                                                 class="w-full aspect-[1.69] max-md:max-w-full" />
                                         </a>
                                         <a href="./tintucchitiet.html">
-                                            <div
-                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full">
+                                                                                        <div
+                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full" style="text-shadow: grey 0px 3px 5px">
                                                 Xu hướng thiết kế nội thất mới nhất 2024
                                             </div>
                                         </a>
@@ -445,8 +446,8 @@
                                                 class="w-full aspect-[1.69] max-md:max-w-full" />
                                         </a>
                                         <a href="./tintucchitiet.html">
-                                            <div
-                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full">
+                                                                                        <div
+                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full" style="text-shadow: grey 0px 3px 5px">
                                                 Xu hướng thiết kế nội thất mới nhất 2024
                                             </div>
                                         </a>
@@ -470,8 +471,8 @@
                                                 class="w-full aspect-[1.69] max-md:max-w-full" />
                                         </a>
                                         <a href="./tintucchitiet.html">
-                                            <div
-                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full">
+                                                                                        <div
+                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full" style="text-shadow: grey 0px 3px 5px">
                                                 Xu hướng thiết kế nội thất mới nhất 2024
                                             </div>
                                         </a>
@@ -495,8 +496,8 @@
                                                 class="w-full aspect-[1.69] max-md:max-w-full" />
                                         </a>
                                         <a href="./tintucchitiet.html">
-                                            <div
-                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full">
+                                                                                        <div
+                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full" style="text-shadow: grey 0px 3px 5px">
                                                 Xu hướng thiết kế nội thất mới nhất 2024
                                             </div>
                                         </a>
@@ -524,8 +525,8 @@
                                                 class="w-full aspect-[1.69] max-md:max-w-full" />
                                         </a>
                                         <a href="./tintucchitiet.html">
-                                            <div
-                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full">
+                                                                                        <div
+                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full" style="text-shadow: grey 0px 3px 5px">
                                                 Xu hướng thiết kế nội thất mới nhất 2024
                                             </div>
                                         </a>
@@ -549,8 +550,8 @@
                                                 class="w-full aspect-[1.69] max-md:max-w-full" />
                                         </a>
                                         <a href="./tintucchitiet.html">
-                                            <div
-                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full">
+                                                                                        <div
+                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full" style="text-shadow: grey 0px 3px 5px">
                                                 Xu hướng thiết kế nội thất mới nhất 2024
                                             </div>
                                         </a>
@@ -560,7 +561,7 @@
                                             since the 1500s ...
                                         </div>
                                         <div
-                                            class="flex gap-2 self-start mt-5 text-sm text-neutral-700 text-opacity-70">
+                                            class="flex gap-2 self-start mt-5 text-sm text-neutral-700 text-opacity-70 pb-32">
                                             <img loading="lazy" src="./assets/images/tintuc/Vectortintuc.png"
                                                 class="shrink-0 self-start w-4 aspect-square" />
                                             <div class="flex-auto">07.04.2024 | Chuyên mục</div>
@@ -574,8 +575,8 @@
                                                 class="w-full aspect-[1.69] max-md:max-w-full" />
                                         </a>
                                         <a href="./tintucchitiet.html">
-                                            <div
-                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full">
+                                                                                        <div
+                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full" style="text-shadow: grey 0px 3px 5px">
                                                 Xu hướng thiết kế nội thất mới nhất 2024
                                             </div>
                                         </a>
@@ -601,11 +602,12 @@
 
                 <swiper-slide class="content-swiper1 flex flex-col px-5 w-[1280px] mx-auto  ">
                     <div class="flex flex-col px-5 ">
-                        <div class="img-center">
-                            <img src="./assets/images/tintuc/Line.png" alt="">
-                        </div>
                         <div
-                            class="text-4xl font-bold text-blue-900 leading-[60px] max-md:max-w-full max-md:text-4xl text-left pt-4 ">
+                            class=" shrink-0 h-[0.5px] bg-orange-400 border-2 md:border-4 border-[#FCB040] border-solid max-md:max-w-full w-[100px] md:w-[150px]">
+                        </div>
+                        <div class=" text-4xl font-bold text-blue-900 leading-[60px] max-md:max-w-full max-md:text-4xl text-left pt-4"
+                            style="text-shadow: grey 0px 2px 4px">
+
                             Tin tức cập nhật
                         </div>
 
@@ -619,8 +621,8 @@
                                                 class="w-full aspect-[1.69] max-md:max-w-full" />
                                         </a>
                                         <a href="./tintucchitiet.html">
-                                            <div
-                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full">
+                                                                                        <div
+                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full" style="text-shadow: grey 0px 3px 5px">
                                                 Xu hướng thiết kế nội thất mới nhất 2024
                                             </div>
                                         </a>
@@ -645,8 +647,8 @@
                                                 class="w-full aspect-[1.69] max-md:max-w-full" />
                                         </a>
                                         <a href="./tintucchitiet.html">
-                                            <div
-                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full">
+                                                                                        <div
+                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full" style="text-shadow: grey 0px 3px 5px">
                                                 Xu hướng thiết kế nội thất mới nhất 2024
                                             </div>
                                         </a>
@@ -670,8 +672,8 @@
                                                 class="w-full aspect-[1.69] max-md:max-w-full" />
                                         </a>
                                         <a href="./tintucchitiet.html">
-                                            <div
-                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full">
+                                                                                        <div
+                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full" style="text-shadow: grey 0px 3px 5px">
                                                 Xu hướng thiết kế nội thất mới nhất 2024
                                             </div>
                                         </a>
@@ -699,8 +701,8 @@
                                                 class="w-full aspect-[1.69] max-md:max-w-full" />
                                         </a>
                                         <a href="./tintucchitiet.html">
-                                            <div
-                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full">
+                                                                                        <div
+                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full" style="text-shadow: grey 0px 3px 5px">
                                                 Xu hướng thiết kế nội thất mới nhất 2024
                                             </div>
                                         </a>
@@ -724,8 +726,8 @@
                                                 class="w-full aspect-[1.69] max-md:max-w-full" />
                                         </a>
                                         <a href="./tintucchitiet.html">
-                                            <div
-                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full">
+                                                                                        <div
+                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full" style="text-shadow: grey 0px 3px 5px">
                                                 Xu hướng thiết kế nội thất mới nhất 2024
                                             </div>
                                         </a>
@@ -749,8 +751,8 @@
                                                 class="w-full aspect-[1.69] max-md:max-w-full" />
                                         </a>
                                         <a href="./tintucchitiet.html">
-                                            <div
-                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full">
+                                                                                        <div
+                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full" style="text-shadow: grey 0px 3px 5px">
                                                 Xu hướng thiết kế nội thất mới nhất 2024
                                             </div>
                                         </a>
@@ -778,8 +780,8 @@
                                                 class="w-full aspect-[1.69] max-md:max-w-full" />
                                         </a>
                                         <a href="./tintucchitiet.html">
-                                            <div
-                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full">
+                                                                                        <div
+                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full" style="text-shadow: grey 0px 3px 5px">
                                                 Xu hướng thiết kế nội thất mới nhất 2024
                                             </div>
                                         </a>
@@ -803,8 +805,8 @@
                                                 class="w-full aspect-[1.69] max-md:max-w-full" />
                                         </a>
                                         <a href="./tintucchitiet.html">
-                                            <div
-                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full">
+                                                                                        <div
+                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full" style="text-shadow: grey 0px 3px 5px">
                                                 Xu hướng thiết kế nội thất mới nhất 2024
                                             </div>
                                         </a>
@@ -828,8 +830,8 @@
                                                 class="w-full aspect-[1.69] max-md:max-w-full" />
                                         </a>
                                         <a href="./tintucchitiet.html">
-                                            <div
-                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full">
+                                                                                        <div
+                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full" style="text-shadow: grey 0px 3px 5px">
                                                 Xu hướng thiết kế nội thất mới nhất 2024
                                             </div>
                                         </a>
@@ -854,11 +856,13 @@
                 </swiper-slide>
                 <swiper-slide class="content-swiper1 flex flex-col px-5 w-[1280px] mx-auto  ">
                     <div class="flex flex-col px-5 ">
-                        <div class="img-center">
-                            <img src="./assets/images/tintuc/Line.png" alt="">
-                        </div>
                         <div
-                            class="text-4xl font-bold text-blue-900 leading-[60px] max-md:max-w-full max-md:text-4xl text-left pt-4 ">
+                            class=" shrink-0 h-[0.5px] bg-orange-400 border-2 md:border-4 border-[#FCB040] border-solid max-md:max-w-full w-[100px] md:w-[150px]">
+                        </div>
+                        <div class=" text-4xl font-bold text-blue-900 leading-[60px] max-md:max-w-full max-md:text-4xl text-left pt-4"
+                            style="text-shadow: grey 0px 2px 4px">
+
+
                             Tin tức cập nhật
                         </div>
 
@@ -872,8 +876,8 @@
                                                 class="w-full aspect-[1.69] max-md:max-w-full" />
                                         </a>
                                         <a href="./tintucchitiet.html">
-                                            <div
-                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full">
+                                                                                        <div
+                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full" style="text-shadow: grey 0px 3px 5px">
                                                 Xu hướng thiết kế nội thất mới nhất 2024
                                             </div>
                                         </a>
@@ -898,8 +902,8 @@
                                                 class="w-full aspect-[1.69] max-md:max-w-full" />
                                         </a>
                                         <a href="./tintucchitiet.html">
-                                            <div
-                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full">
+                                                                                        <div
+                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full" style="text-shadow: grey 0px 3px 5px">
                                                 Xu hướng thiết kế nội thất mới nhất 2024
                                             </div>
                                         </a>
@@ -923,8 +927,8 @@
                                                 class="w-full aspect-[1.69] max-md:max-w-full" />
                                         </a>
                                         <a href="./tintucchitiet.html">
-                                            <div
-                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full">
+                                                                                        <div
+                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full" style="text-shadow: grey 0px 3px 5px">
                                                 Xu hướng thiết kế nội thất mới nhất 2024
                                             </div>
                                         </a>
@@ -952,8 +956,34 @@
                                                 class="w-full aspect-[1.69] max-md:max-w-full" />
                                         </a>
                                         <a href="./tintucchitiet.html">
-                                            <div
-                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full">
+                                                                                        <div
+                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full" style="text-shadow: grey 0px 3px 5px">
+                                                Xu hướng thiết kế nội thất mới nhất 2024
+                                            </div>
+
+                                        </a>
+                                        <div class="mt-7 text-lg text-neutral-700 max-md:mr-2.5 max-md:max-w-full">
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting
+                                            industry. Lorem Ipsum has the industry's standard dummy text ever
+                                            since the 1500s ...
+                                        </div>
+                                        <div
+                                            class="flex gap-2 self-start mt-5 text-sm text-neutral-700 text-opacity-70">
+                                            <img loading="lazy" src="./assets/images/tintuc/Vectortintuc.png"
+                                                class="shrink-0 self-start w-4 aspect-square" />
+                                            <div class="flex-auto">07.04.2024 | Chuyên mục</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full">
+                                    <div class="flex flex-col grow max-md:mt-10 max-md:max-w-full">
+                                        <a href="./tintucchitiet.html">
+                                            <img loading="lazy" src="./assets/images/tintuc/anhtrongcontent.png"
+                                                class="w-full aspect-[1.69] max-md:max-w-full" />
+                                        </a>
+                                        <a href="./tintucchitiet.html">
+                                                                                        <div
+                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full" style="text-shadow: grey 0px 3px 5px">
                                                 Xu hướng thiết kế nội thất mới nhất 2024
                                             </div>
                                         </a>
@@ -977,33 +1007,8 @@
                                                 class="w-full aspect-[1.69] max-md:max-w-full" />
                                         </a>
                                         <a href="./tintucchitiet.html">
-                                            <div
-                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full">
-                                                Xu hướng thiết kế nội thất mới nhất 2024
-                                            </div>
-                                        </a>
-                                        <div class="mt-7 text-lg text-neutral-700 max-md:mr-2.5 max-md:max-w-full">
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting
-                                            industry. Lorem Ipsum has the industry's standard dummy text ever
-                                            since the 1500s ...
-                                        </div>
-                                        <div
-                                            class="flex gap-2 self-start mt-5 text-sm text-neutral-700 text-opacity-70">
-                                            <img loading="lazy" src="./assets/images/tintuc/Vectortintuc.png"
-                                                class="shrink-0 self-start w-4 aspect-square" />
-                                            <div class="flex-auto">07.04.2024 | Chuyên mục</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full">
-                                    <div class="flex flex-col grow max-md:mt-10 max-md:max-w-full">
-                                        <a href="./tintucchitiet.html">
-                                            <img loading="lazy" src="./assets/images/tintuc/anhtrongcontent.png"
-                                                class="w-full aspect-[1.69] max-md:max-w-full" />
-                                        </a>
-                                        <a href="./tintucchitiet.html">
-                                            <div
-                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full">
+                                                                                        <div
+                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full" style="text-shadow: grey 0px 3px 5px">
                                                 Xu hướng thiết kế nội thất mới nhất 2024
                                             </div>
                                         </a>
@@ -1031,8 +1036,8 @@
                                                 class="w-full aspect-[1.69] max-md:max-w-full" />
                                         </a>
                                         <a href="./tintucchitiet.html">
-                                            <div
-                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full">
+                                                                                        <div
+                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full" style="text-shadow: grey 0px 3px 5px">
                                                 Xu hướng thiết kế nội thất mới nhất 2024
                                             </div>
                                         </a>
@@ -1056,8 +1061,8 @@
                                                 class="w-full aspect-[1.69] max-md:max-w-full" />
                                         </a>
                                         <a href="./tintucchitiet.html">
-                                            <div
-                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full">
+                                                                                        <div
+                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full" style="text-shadow: grey 0px 3px 5px">
                                                 Xu hướng thiết kế nội thất mới nhất 2024
                                             </div>
                                         </a>
@@ -1081,8 +1086,8 @@
                                                 class="w-full aspect-[1.69] max-md:max-w-full" />
                                         </a>
                                         <a href="./tintucchitiet.html">
-                                            <div
-                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full">
+                                                                                        <div
+                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full" style="text-shadow: grey 0px 3px 5px">
                                                 Xu hướng thiết kế nội thất mới nhất 2024
                                             </div>
                                         </a>
@@ -1107,11 +1112,13 @@
                 </swiper-slide>
                 <swiper-slide class="content-swiper1 flex flex-col px-5 w-[1280px] mx-auto  ">
                     <div class="flex flex-col px-5 ">
-                        <div class="img-center">
-                            <img src="./assets/images/tintuc/Line.png" alt="">
-                        </div>
                         <div
-                            class="text-4xl font-bold text-blue-900 leading-[60px] max-md:max-w-full max-md:text-4xl text-left pt-4 ">
+                            class=" shrink-0 h-[0.5px] bg-orange-400 border-2 md:border-4 border-[#FCB040] border-solid max-md:max-w-full w-[100px] md:w-[150px]">
+                        </div>
+                        <div class=" text-4xl font-bold text-blue-900 leading-[60px] max-md:max-w-full max-md:text-4xl text-left pt-4"
+                            style="text-shadow: grey 0px 2px 4px">
+
+
                             Tin tức cập nhật
                         </div>
 
@@ -1125,8 +1132,8 @@
                                                 class="w-full aspect-[1.69] max-md:max-w-full" />
                                         </a>
                                         <a href="./tintucchitiet.html">
-                                            <div
-                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full">
+                                                                                        <div
+                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full" style="text-shadow: grey 0px 3px 5px">
                                                 Xu hướng thiết kế nội thất mới nhất 2024
                                             </div>
                                         </a>
@@ -1151,8 +1158,8 @@
                                                 class="w-full aspect-[1.69] max-md:max-w-full" />
                                         </a>
                                         <a href="./tintucchitiet.html">
-                                            <div
-                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full">
+                                                                                        <div
+                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full" style="text-shadow: grey 0px 3px 5px">
                                                 Xu hướng thiết kế nội thất mới nhất 2024
                                             </div>
                                         </a>
@@ -1176,8 +1183,8 @@
                                                 class="w-full aspect-[1.69] max-md:max-w-full" />
                                         </a>
                                         <a href="./tintucchitiet.html">
-                                            <div
-                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full">
+                                                                                        <div
+                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full" style="text-shadow: grey 0px 3px 5px">
                                                 Xu hướng thiết kế nội thất mới nhất 2024
                                             </div>
                                         </a>
@@ -1205,8 +1212,8 @@
                                                 class="w-full aspect-[1.69] max-md:max-w-full" />
                                         </a>
                                         <a href="./tintucchitiet.html">
-                                            <div
-                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full">
+                                                                                        <div
+                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full" style="text-shadow: grey 0px 3px 5px">
                                                 Xu hướng thiết kế nội thất mới nhất 2024
                                             </div>
                                         </a>
@@ -1230,8 +1237,8 @@
                                                 class="w-full aspect-[1.69] max-md:max-w-full" />
                                         </a>
                                         <a href="./tintucchitiet.html">
-                                            <div
-                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full">
+                                                                                        <div
+                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full" style="text-shadow: grey 0px 3px 5px">
                                                 Xu hướng thiết kế nội thất mới nhất 2024
                                             </div>
                                         </a>
@@ -1255,8 +1262,8 @@
                                                 class="w-full aspect-[1.69] max-md:max-w-full" />
                                         </a>
                                         <a href="./tintucchitiet.html">
-                                            <div
-                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full">
+                                                                                        <div
+                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full" style="text-shadow: grey 0px 3px 5px">
                                                 Xu hướng thiết kế nội thất mới nhất 2024
                                             </div>
                                         </a>
@@ -1284,8 +1291,8 @@
                                                 class="w-full aspect-[1.69] max-md:max-w-full" />
                                         </a>
                                         <a href="./tintucchitiet.html">
-                                            <div
-                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full">
+                                                                                        <div
+                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full" style="text-shadow: grey 0px 3px 5px">
                                                 Xu hướng thiết kế nội thất mới nhất 2024
                                             </div>
                                         </a>
@@ -1309,8 +1316,8 @@
                                                 class="w-full aspect-[1.69] max-md:max-w-full" />
                                         </a>
                                         <a href="./tintucchitiet.html">
-                                            <div
-                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full">
+                                                                                        <div
+                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full" style="text-shadow: grey 0px 3px 5px">
                                                 Xu hướng thiết kế nội thất mới nhất 2024
                                             </div>
                                         </a>
@@ -1334,8 +1341,8 @@
                                                 class="w-full aspect-[1.69] max-md:max-w-full" />
                                         </a>
                                         <a href="./tintucchitiet.html">
-                                            <div
-                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full">
+                                                                                        <div
+                                                class="mt-10 text-3xl font-bold leading-9 text-blue-900 max-md:max-w-full" style="text-shadow: grey 0px 3px 5px">
                                                 Xu hướng thiết kế nội thất mới nhất 2024
                                             </div>
                                         </a>
@@ -1365,8 +1372,136 @@
         </section>
         <!-- Kết thúc nội dung tin tức  -->
 
-        <!-- Footer -->
+        <!--Form đăng ký-->
+        <section class="max-content py-10 md:py-20 flex flex-col px-5">
+            <div
+                class=" shrink-0 h-[0.5px] bg-orange-400 border-2 md:border-4 border-[#FCB040] border-solid max-md:max-w-full w-[100px] md:w-[150px]">
+            </div>
+            <h1
+                class="mt-3 w-full text-5xl font-semibold text-blue-900 md:leading-[60px] max-md:max-w-full max-md:text-3xl leading-[48px]">
+                Đăng ký nhận tư vấn từ DTF
+            </h1>
+            <p class="mt-4 md:mt-7 w-full text-lg text-neutral-700 max-md:max-w-full">
+                Quý khách vui lòng liên hệ với DTF qua điện thoại, email hoặc điền vào mãu thông tin để được tư vấn.
+            </p>
+            <div class="mt-16 w-full max-md:mt-6 max-md:max-w-full">
+                <div class="relative flex gap-5 max-md:flex-col max-md:gap-0">
+                    <figure class="hidden md:flex flex-col  w-[56%] max-md:ml-0 max-md:w-full ">
+                        <img loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/c759435f6e5e2f1ab32b923436f9e2a93b7ab1ebc3ff8763b329df47527d216c?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
+                            alt="" class="grow w-full aspect-[1.3] max-md:max-w-full" />
+                    </figure>
+                    <div class="flex md:absolute top-[11%] left-[50%] ">
+                        <form
+                            class="flex flex-col py-8 md:px-16 md:py-20  w-full text-base bg-stone-200 text-neutral-700 text-opacity-50 rounded-lg max-md:px-5 max-md:mt-0 max-md:max-w-full">
+                            <div class="flex gap-5 md:mx-4  max-md:flex-wrap max-md:mt-0 max-md:mr-0 max-md:max-w-full">
+                                <label for="name" class="sr-only">Họ tên</label>
+                                <input type="text" id="name" placeholder="Họ tên" aria-label="Họ tên"
+                                    class="w-full justify-center items-start px-2.5 py-2.5 bg-white rounded-md max-md:pr-5" />
+                                <label for="phone" class="sr-only">Số điện thoại</label>
+                                <input type="tel" id="phone" placeholder="Số điện thoại" aria-label="Số điện thoại"
+                                    class="w-full justify-center items-start p-2.5 bg-white rounded-md max-md:pr-5" />
+                            </div>
+                            <label for="email" class="sr-only">Email</label>
+                            <input type="email" id="email" placeholder="Email" aria-label="Email"
+                                class="justify-center items-start px-2.5 py-2.5 md:mx-4 mt-5 whitespace-nowrap bg-white rounded-md max-md:pr-5 max-md:mr-0 max-md:max-w-full" />
+                            <div
+                                class="flex gap-5 px-3 py-2.5 md:mx-4 mt-5 bg-white rounded-md max-md:flex-wrap max-md:mr-0 max-md:max-w-full">
+                                <input type="date" class="flex-auto" />
+                                <!-- <img loading="lazy"
+                                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/4776946ddb1c0d5c3314848c37f4fd370439afa7882958d79b50ff01c4046e1b?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
+                                        alt="" class="shrink-0 self-start w-4 aspect-square" /> -->
+                            </div>
 
+                            <button type="submit"
+                                class="flex gap-4 self-end px-7 py-3.5 mt-7 text-base md:text-lg font-semibold text-white background_second rounded-[500px] max-md:px-5 max-md:mr-0">
+                                <span>Nhận tư vấn</span>
+                                <img loading="lazy"
+                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/1c42535ee8e1689ac11dccbe6015902c23fbf964e0bea6c7117991c9acc5311e?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
+                                    alt="" class="shrink-0 self-start w-6 aspect-square pt-1" />
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Footer-->
+        <section class="flex overflow-hidden relative flex-col justify-center min-h-[464px]">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cc7121df96ef0bff6a448306fe4a4db41e5bf3a3d6ae742b0699b563ccc5e38f?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
+                alt="" class="object-cover absolute inset-0 size-full" />
+            <div
+                class="flex relative flex-col items-center px-5 pt-10 md:pt-20 pb-5 w-full bg-black bg-opacity-80 max-md:max-w-full">
+                <div class="mt-4 w-full max-content  max-md:max-w-full">
+                    <div class="flex gap-12 max-md:flex-col max-md:gap-0">
+                        <div class="flex flex-col w-[38%] max-md:ml-0 max-md:w-full">
+                            <div class="flex flex-col grow items-start mt-1 max-md:mt-6 max-md:max-w-full">
+                                <a href="">
+                                    <img src="./assets/images/Logo.png" alt="DTF Việt Nam logo"
+                                        class="max-w-full aspect-[2.86] w-[90px] md:w-[120px]" />
+                                </a>
+                                <h2
+                                    class="self-stretch mt-4 md:mt-7 text-xl md:text-2xl font-semibold text-white max-md:max-w-full">
+                                    Công ty Cổ phần Thương mại Dịch vụ DTF Việt Nam
+                                </h2>
+                                <div
+                                    class="flex gap-3.5 mt-4 md:mt-8 text-xl md:text-3xl font-extrabold text-orange-400">
+                                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cac4da3e65728bae6f5d7c922c84f3753d3759aede5a11c9630b849b304c07ab?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
+                                        alt="" class="shrink-0 w-5 md:w-6 aspect-square" />
+                                    <a href="tel:1900988935" class="flex-auto">1900 988 935</a>
+                                </div>
+                                <div class="flex gap-3.5 mt-4 md:mt-6">
+                                    <a href="">
+                                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3759d68e994d8c21d15cb0299b7915ee5a0a53f669e39522174c5055d4d82680?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
+                                            alt="Facebook icon" class="shrink-0 w-6 aspect-square" />
+                                    </a>
+                                    <a href="">
+                                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4d48d01527415fda32b15ac5d2edba25f8c4b28379abc702ddc0ebac389014c1?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
+                                            alt="YouTube icon" class="shrink-0 aspect-[0.96] w-[23px]" />
+                                    </a>
+                                    <a href="">
+                                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b4ad1e2bab0737f1c7b2ddcbd7efc30f1b313f952882b0d979b19bbfadc4caea?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
+                                            alt="Instagram icon" class="shrink-0 aspect-[0.92] w-[22px]" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col ml-5 w-[31%] max-md:ml-0 max-md:w-full">
+                            <div class="text-lg text-white max-md:mt-10">
+                                <div class="">
+                                    <div class="text-lg md:text-xl font-semibold uppercase"> Địa chỉ</div>
+                                    <div class="text-base md:text-lg">Đường Đào Duy Tùng, Cổ Loa, Đông Anh, Hà Nội</div>
+                                </div>
+                                <div class="mt-4 md:mt-6">
+                                    <div class="text-lg md:text-xl font-semibold uppercase">Trụ sở</div>
+                                    <div class="text-base md:text-lg">Tầng 1A,Tháp C tòa Central Point, 219 Trung Kính,
+                                        Yên Hòa, Cầu Giấy, Hà Nội</div>
+                                </div>
+                                <div class="mt-4 md:mt-6">
+                                    <div class="text-lg md:text-xl font-semibold uppercase">Chi nhánh</div>
+                                    <div class="text-base md:text-lg">Số 48 đường số 2, KDC Cityland, Phường 7, Quận Gò
+                                        Vấp, TP. Hồ Chí Minh</div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="flex flex-col ml-5 w-[31%] max-md:ml-0 max-md:w-full">
+                            <div class="text-lg text-white  max-md:mt-10">
+                                <div class="text-lg md:text-xl font-semibold uppercase">Địa chỉ Nhà máy</div>
+                                <div class="mt-4 md:mt-6 text-base md:text-lg">Đường Đào Duy Tùng, Cổ Loa, Đông Anh, Hà
+                                    Nội</div>
+                                <div class="mt-4 md:mt-6 text-base md:text-lg">Số 65 Ngô Quang Thắm, Ấp 2, Long Thới,
+                                    Nhà Bè, Hồ Chí Minh</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr
+                    class="self-stretch mt-20 w-full border border-solid bg-stone-300 bg-opacity-50 border-stone-300 border-opacity-50 min-h-[1px] max-md:mt-10 max-md:max-w-full" />
+                <div class="mt-4 md:mt-5 text-base text-center text-white">
+                    © Bản quyền © 2023 thuộc về DTF | Giữ toàn quyền
+                </div>
+            </div>
+        </section>
 
     </main>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
@@ -1376,22 +1511,26 @@
 
         const params = {
             injectStyles: [`
+
+
         .swiper-pagination-bullet {
-          width: 20px;
-          height: 20px;
+          width: 30px;
+          height: 30px;
           text-align: center;
-          line-height: 20px;
-          font-size: 12px;
+          line-height: 30px;
+          font-size: 15px;
           color: #000;
           opacity: 1;
           background: rgba(0, 0, 0, 0.2);
+            
         }
   
         .swiper-pagination-bullet-active {
           color: #fff;
-          background: #007aff;
+          background: #fbb03f;
         }
         `],
+
             pagination: {
                 clickable: true,
                 renderBullet: function (index, className) {
@@ -1399,6 +1538,8 @@
                         return '<span class="' + className + '">' + (index + 1) + "</span>";
                     } else if (index === 3) {
                         return '<span class="' + className + '">...</span>';
+
+
                     } else {
                         return '';
                     }
