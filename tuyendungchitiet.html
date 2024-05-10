@@ -29,8 +29,9 @@
       <!-- Gắn header vào dưới đây -->
 
       <!-- START: Breadcrumb -->
-      <section id="breadcrumb" class="overflow-hidden py-7 md:text-2xl text-xl text-neutral-700 bg-[#E9E4E1]">
-         <div class="flex justify-center items-center mx-auto max-w-[1440px] gap-3.5 md:px-20 px-5">
+      <section id="breadcrumb"
+         class="overflow-hidden py-4 px-5 md:px-0 md:py-7 md:text-xl text-base text-neutral-700 bg-[#E9E4E1] font-['Nunito_Sans']">
+         <div class="flex justify-center items-center mx-auto max-w-[1440px] gap-3.5">
             <div>Tuyển dụng</div>
             <img loading="lazy"
                src="https://cdn.builder.io/api/v1/image/assets/TEMP/ccf2aff889b91bcbfc48f90f207482291749a483f8a1a0bd8d2816cd31e4f4b3?apiKey=2d6f9cce25ff4601a22357321fee874e&"
@@ -41,123 +42,183 @@
       <!-- END: Breadcrumb -->
 
       <!-- START: Tuyển dụng chi tiết -->
-      <section class="md:py-16 py-10 w-full">
-         <div id="wrapper" class="max-w-[1440px] mx-auto flex w-full px-5 md:px-20 md:gap-16 gap-10">
-            <div class="flex flex-col px-8 pt-9 pb-14 text-lg bg-neutral-100 max-w-[449px] text-neutral-700">
-               <h2 class="font-bold">CÔNG VIỆC TƯƠNG TỰ DÀNH CHO BẠN</h2>
-               <div class="mt-11">
-                  <h3 class="font-bold text-neutral-700">Nhân viên kế toán</h3>
-                  <p>Hà Nội</p>
-                  <p>Toàn thời gian</p>
-                  <p>8 - 10 triệu</p>
+      <section class="md:py-16 w-full font-['Nunito_Sans']">
+         <div id="wrapper" class="max-w-[1440px] mx-auto flex flex-col-reverse md:flex-row w-full md:gap-16 gap-10">
+            <!-- Công việc tương tự -->
+            <div id="related-jobs">
+               <div
+                  class="flex flex-col px-8 pt-9 pb-14 md:text-lg text-base bg-neutral-100 md:max-w-[449px] text-neutral-700">
+                  <h2 class="font-bold">CÔNG VIỆC TƯƠNG TỰ DÀNH CHO BẠN</h2>
+
+                  <div class="related-job-item mt-10">
+                     <h3 class="font-bold text-neutral-700">Nhân viên kế toán</h3>
+                     <ul>
+                        <li class="flex justify-start items-center gap-2">
+                           <img loading="lazy"
+                              src="https://cdn.builder.io/api/v1/image/assets/TEMP/f23d5c33f477acb5af560d025a6fab07eadff8a333373b3053c26430711403de?apiKey=2d6f9cce25ff4601a22357321fee874e&"
+                              alt="" class="aspect-square w-[13px] inline" />
+                           <span>Hà Nội</span>
+                        </li>
+                        <li class="flex justify-start items-center gap-2">
+                           <img loading="lazy"
+                              src="https://cdn.builder.io/api/v1/image/assets/TEMP/f23d5c33f477acb5af560d025a6fab07eadff8a333373b3053c26430711403de?apiKey=2d6f9cce25ff4601a22357321fee874e&"
+                              alt="" class="aspect-square w-[13px] inline" />
+                           <span>Toàn thời gian</span>
+                        </li>
+                        <li class="flex justify-start items-center gap-2">
+                           <img loading="lazy"
+                              src="https://cdn.builder.io/api/v1/image/assets/TEMP/f23d5c33f477acb5af560d025a6fab07eadff8a333373b3053c26430711403de?apiKey=2d6f9cce25ff4601a22357321fee874e&"
+                              alt="" class="aspect-square w-[13px] inline" />
+                           <span>8 - 10 triệu</span>
+                        </li>
+                     </ul>
+                  </div>
+                  <hr class="shrink-0 mt-8 h-px border border-solid bg-stone-300 border-stone-300" />
+                  <div class="related-job-item mt-10">
+                     <h3 class="font-bold text-neutral-700">Nhân viên kế toán</h3>
+                     <ul>
+                        <li class="flex justify-start items-center gap-2">
+                           <img loading="lazy"
+                              src="https://cdn.builder.io/api/v1/image/assets/TEMP/f23d5c33f477acb5af560d025a6fab07eadff8a333373b3053c26430711403de?apiKey=2d6f9cce25ff4601a22357321fee874e&"
+                              alt="" class="aspect-square w-[13px] inline" />
+                           <span>Hà Nội</span>
+                        </li>
+                        <li class="flex justify-start items-center gap-2">
+                           <img loading="lazy"
+                              src="https://cdn.builder.io/api/v1/image/assets/TEMP/f23d5c33f477acb5af560d025a6fab07eadff8a333373b3053c26430711403de?apiKey=2d6f9cce25ff4601a22357321fee874e&"
+                              alt="" class="aspect-square w-[13px] inline" />
+                           <span>Toàn thời gian</span>
+                        </li>
+                        <li class="flex justify-start items-center gap-2">
+                           <img loading="lazy"
+                              src="https://cdn.builder.io/api/v1/image/assets/TEMP/f23d5c33f477acb5af560d025a6fab07eadff8a333373b3053c26430711403de?apiKey=2d6f9cce25ff4601a22357321fee874e&"
+                              alt="" class="aspect-square w-[13px] inline" />
+                           <span>8 - 10 triệu</span>
+                        </li>
+                     </ul>
+                  </div>
+
+                  <hr class="shrink-0 mt-8 h-px border border-solid bg-stone-300 border-stone-300" />
+                  <div class="related-job-item mt-10">
+                     <h3 class="font-bold text-neutral-700">Nhân viên kế toán</h3>
+                     <ul>
+                        <li class="flex justify-start items-center gap-2">
+                           <img loading="lazy"
+                              src="https://cdn.builder.io/api/v1/image/assets/TEMP/f23d5c33f477acb5af560d025a6fab07eadff8a333373b3053c26430711403de?apiKey=2d6f9cce25ff4601a22357321fee874e&"
+                              alt="" class="aspect-square w-[13px] inline" />
+                           <span>Hà Nội</span>
+                        </li>
+                        <li class="flex justify-start items-center gap-2">
+                           <img loading="lazy"
+                              src="https://cdn.builder.io/api/v1/image/assets/TEMP/f23d5c33f477acb5af560d025a6fab07eadff8a333373b3053c26430711403de?apiKey=2d6f9cce25ff4601a22357321fee874e&"
+                              alt="" class="aspect-square w-[13px] inline" />
+                           <span>Toàn thời gian</span>
+                        </li>
+                        <li class="flex justify-start items-center gap-2">
+                           <img loading="lazy"
+                              src="https://cdn.builder.io/api/v1/image/assets/TEMP/f23d5c33f477acb5af560d025a6fab07eadff8a333373b3053c26430711403de?apiKey=2d6f9cce25ff4601a22357321fee874e&"
+                              alt="" class="aspect-square w-[13px] inline" />
+                           <span>8 - 10 triệu</span>
+                        </li>
+                     </ul>
+                  </div>
+                  <hr class="shrink-0 mt-8 h-px border border-solid bg-stone-300 border-stone-300" />
+                  <div class="related-job-item mt-10">
+                     <h3 class="font-bold text-neutral-700">Nhân viên kế toán</h3>
+                     <ul>
+                        <li class="flex justify-start items-center gap-2">
+                           <img loading="lazy"
+                              src="https://cdn.builder.io/api/v1/image/assets/TEMP/f23d5c33f477acb5af560d025a6fab07eadff8a333373b3053c26430711403de?apiKey=2d6f9cce25ff4601a22357321fee874e&"
+                              alt="" class="aspect-square w-[13px] inline" />
+                           <span>Hà Nội</span>
+                        </li>
+                        <li class="flex justify-start items-center gap-2">
+                           <img loading="lazy"
+                              src="https://cdn.builder.io/api/v1/image/assets/TEMP/f23d5c33f477acb5af560d025a6fab07eadff8a333373b3053c26430711403de?apiKey=2d6f9cce25ff4601a22357321fee874e&"
+                              alt="" class="aspect-square w-[13px] inline" />
+                           <span>Toàn thời gian</span>
+                        </li>
+                        <li class="flex justify-start items-center gap-2">
+                           <img loading="lazy"
+                              src="https://cdn.builder.io/api/v1/image/assets/TEMP/f23d5c33f477acb5af560d025a6fab07eadff8a333373b3053c26430711403de?apiKey=2d6f9cce25ff4601a22357321fee874e&"
+                              alt="" class="aspect-square w-[13px] inline" />
+                           <span>8 - 10 triệu</span>
+                        </li>
+                     </ul>
+                  </div>
                </div>
-               <hr class="shrink-0 mt-8 h-px border border-solid bg-stone-300 border-stone-300" />
-               <div class="mt-10">
-                  <h3 class="font-bold text-neutral-700">Nhân viên kế toán</h3>
-                  <p>Hà Nội</p>
-                  <p>Toàn thời gian</p>
-                  <p>8 - 10 triệu</p>
-               </div>
-               <img loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/f23d5c33f477acb5af560d025a6fab07eadff8a333373b3053c26430711403de?apiKey=2d6f9cce25ff4601a22357321fee874e&"
-                  alt="" class="aspect-square w-[13px]" />
-               <hr class="shrink-0 mt-8 h-px border border-solid bg-stone-300 border-stone-300" />
-               <div class="mt-10">
-                  <h3 class="font-bold text-neutral-700">Nhân viên kế toán</h3>
-                  <p>Hà Nội</p>
-                  <p>Toàn thời gian</p>
-                  <p>8 - 10 triệu</p>
-               </div>
-               <img loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/22eee6baf6edd27f96b8574bb1f69b65b8535c24e414fb960ce56243988b01a6?apiKey=2d6f9cce25ff4601a22357321fee874e&"
-                  alt="" class="aspect-square w-[13px]" />
-               <hr class="shrink-0 mt-8 h-px border border-solid bg-stone-300 border-stone-300" />
-               <div class="mt-10">
-                  <h3 class="font-bold text-neutral-700">Nhân viên kế toán</h3>
-                  <p>Hà Nội</p>
-                  <p>Toàn thời gian</p>
-                  <p>8 - 10 triệu</p>
-               </div>
-               <img loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/94cc4f8e9b0eff920da12b42747f3a2cfdc02e4d3619342d85457610741b72c3?apiKey=2d6f9cce25ff4601a22357321fee874e&"
-                  alt="" class="aspect-square w-[13px]" />
             </div>
-            <section class="flex flex-col px-10 py-16 border border-solid border-neutral-300 max-w-[946px] max-md:px-5">
-               <div class="max-md:max-w-full">
-                  <div class="flex gap-5 max-md:flex-col max-md:gap-0">
-                     <div class="flex flex-col w-[59%] max-md:ml-0 max-md:w-full">
-                        <div class="flex flex-col grow max-md:mt-10">
-                           <h1 class="text-3xl font-bold text-blue-900 leading-[60px]">Nhân viên giám sát thi công</h1>
-                           <div class="flex gap-5 justify-between mt-9 w-full text-lg leading-6 text-neutral-700">
-                              <div class="flex gap-2.5">
-                                 <img loading="lazy"
-                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/97c24f2a32a71fcbafe6a264dd258c696f19a9b6812b79e3eb658c3a559e3fd3?apiKey=2d6f9cce25ff4601a22357321fee874e&"
-                                    alt="Location icon" class="shrink-0 aspect-square rounded-[500px] w-[43px]" />
-                                 <div>
-                                    <span class="text-sm">Địa điểm</span>
-                                    <br />
-                                    <span class="font-bold">Hà Nội</span>
-                                 </div>
-                              </div>
-                              <div class="flex gap-2.5">
-                                 <img loading="lazy"
-                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/3a962546680385c9f5f17640237cba115a5f81abbfe7a127faf8c10322775779?apiKey=2d6f9cce25ff4601a22357321fee874e&"
-                                    alt="Time icon" class="shrink-0 aspect-square rounded-[500px] w-[43px]" />
-                                 <div>
-                                    <span class="text-sm">Thời gian</span>
-                                    <br />
-                                    <span class="font-bold">Toàn thời gian</span>
-                                 </div>
-                              </div>
-                           </div>
+            <!-- Chi tiết công việc -->
+            <div
+               class="flex flex-col gap-8 md:gap-10 px-5 py-8 md:px-10 md:py-14 border border-solid border-neutral-300 max-w-[946px]">
+               <div class="max-w-full">
+                  <h1 class="text-3xl font-bold text-blue-900 md:leading-[60px] leading-10">Nhân viên giám sát thi công
+                  </h1>
+                  <div class="w-full grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-10 md:flex-row md:mt-10 mt-8">
+                     <div class="flex gap-2.5 text-lg leading-6 text-neutral-700">
+                        <div class="flex-0">
+                           <img
+                              src="https://cdn.builder.io/api/v1/image/assets/TEMP/017b5fe4481e6093bd12455caf6e81fc24715bb2e1add9310ab3b8b4ff927be2?apiKey=2d6f9cce25ff4601a22357321fee874e&"
+                              alt="Location icon" class="basis-0 aspect-square rounded-full w-[36px] md:w-[44px]" />
+                        </div>
+                        <div>
+                           <p class="text-sm">Địa điểm</p>
+                           <p class="font-bold">Hà Nội</p>
                         </div>
                      </div>
-                     <div class="flex flex-col ml-5 w-[21%] max-md:ml-0 max-md:w-full">
-                        <div class="flex grow gap-2.5 mt-16 text-lg leading-6 text-neutral-700 max-md:mt-10">
-                           <img loading="lazy"
-                              src="https://cdn.builder.io/api/v1/image/assets/TEMP/a6e56419edb90d6d4d63c2f13bf1ceaeda76fb99f10f7aa53f4ce2d37207aae5?apiKey=2d6f9cce25ff4601a22357321fee874e&"
-                              alt="Experience icon" class="shrink-0 aspect-square rounded-[500px] w-[43px]" />
-                           <div class="my-auto">
-                              <span class="text-sm">Kinh nghiệm</span>
-                              <br />
-                              <span class="font-bold">2 - 5 năm</span>
-                           </div>
+                     <div class="flex gap-2.5 text-lg leading-6 text-neutral-700">
+                        <div class="flex-0">
+                           <img
+                              src="https://cdn.builder.io/api/v1/image/assets/TEMP/a53c6ec500989c8bf2c522b7f131deccb15c319a6573a7248c0609ba917205cf?apiKey=2d6f9cce25ff4601a22357321fee874e&"
+                              alt="Profile picture" class="shrink-0 aspect-square rounded-full w-[36px] md:w-[44px]" />
+                        </div>
+                        <div>
+                           <p class="text-sm">Thời gian</p>
+                           <p class="font-bold">Toàn thời gian</p>
                         </div>
                      </div>
-                     <div class="flex flex-col ml-5 w-[21%] max-md:ml-0 max-md:w-full">
-                        <div class="flex grow gap-2.5 mt-16 text-lg leading-6 text-neutral-700 max-md:mt-10">
-                           <img loading="lazy"
-                              src="https://cdn.builder.io/api/v1/image/assets/TEMP/2bc7271329838d262641d6264f14601bf1aa3520b26354935147ea5b4d8dbc92?apiKey=2d6f9cce25ff4601a22357321fee874e&"
-                              alt="Salary icon" class="shrink-0 aspect-square rounded-[500px] w-[43px]" />
-                           <div>
-                              <span class="text-sm">Mức lương</span>
-                              <br />
-                              <span class="font-bold">Thỏa thuận</span>
-                           </div>
+                     <div class="flex gap-2.5 text-lg leading-6 text-neutral-700">
+                        <div class="flex-0">
+                           <img
+                              src="https://cdn.builder.io/api/v1/image/assets/TEMP/895c02cb8492dee153776f2e463c1ddc13bac21ef3c69059b6ea81fe4aee88a4?apiKey=2d6f9cce25ff4601a22357321fee874e&"
+                              alt="Location icon" class="shrink-0 aspect-square rounded-full w-[36px] md:w-[44px]" />
+                        </div>
+                        <div>
+                           <p class="text-sm">Kinh nghiệm</p>
+                           <p class="font-bold">2 - 5 năm</p>
+                        </div>
+                     </div>
+                     <div class="flex gap-2.5 text-lg leading-6 text-neutral-700">
+                        <div class="flex-0">
+                           <img
+                              src="https://cdn.builder.io/api/v1/image/assets/TEMP/87c2b1b6ae646adb8ac8e349227d23e450cac470b1e3c658dee1900d04f3ab0e?apiKey=2d6f9cce25ff4601a22357321fee874e&"
+                              alt="Location icon" class="shrink-0 aspect-square rounded-full w-[36px] md:w-[44px]" />
+                        </div>
+                        <div>
+                           <p class="text-sm">Mức lương</p>
+                           <p class="font-bold">Thoả thuận</p>
                         </div>
                      </div>
                   </div>
                </div>
-               <div class="flex gap-5 mt-11 w-full text-lg text-white max-md:flex-wrap max-md:mt-10 max-md:max-w-full">
-                  <button
-                     class="flex grow shrink-0 justify-center items-center px-16 py-3 font-bold bg-blue-900 rounded-md basis-0 w-fit max-md:px-5 max-md:max-w-full">
-                     <div class="flex gap-2.5">
-                        <img loading="lazy"
-                           src="https://cdn.builder.io/api/v1/image/assets/TEMP/9240cf852a1a69505923f7443943ccd2299dc0f1ba3a9a89e90646d56b7bac5e?apiKey=2d6f9cce25ff4601a22357321fee874e&"
-                           alt="Apply icon" class="shrink-0 self-start w-4 aspect-square" />
-                        <span class="flex-auto">Ứng tuyển ngay</span>
-                     </div>
+               <div class="flex gap-5 w-full text-lg text-white flex-col md:flex-row">
+                  <button type="button"
+                     class="flex grow gap-2.5 justify-center items-center px-16 py-3 font-bold bg-blue-900 rounded-md px-5 ">
+                     <img loading="lazy"
+                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/9240cf852a1a69505923f7443943ccd2299dc0f1ba3a9a89e90646d56b7bac5e?apiKey=2d6f9cce25ff4601a22357321fee874e&"
+                        alt="Apply icon" class="w-4 aspect-square" />
+                     <span>Ứng tuyển ngay</span>
                   </button>
-                  <button class="flex gap-2 px-9 py-3.5 font-semibold bg-orange-400 rounded-[500px] max-md:px-5">
+                  <button type="button"
+                     class="flex justify-center py-2 items-center gap-2 font-semibold bg-orange-400 rounded-full px-10 self-center">
                      <img loading="lazy"
                         src="https://cdn.builder.io/api/v1/image/assets/TEMP/35bf81b135141181bf8d2924d9ef720873865d0746c883a7d2557636bdef9a4b?apiKey=2d6f9cce25ff4601a22357321fee874e&"
-                        alt="Copy icon" class="shrink-0 self-start w-4 aspect-square" />
+                        alt="Copy icon" class="w-4 aspect-square" />
                      <span>Copy link</span>
                   </button>
                </div>
-               <hr
-                  class="shrink-0 mt-11 h-px border border-solid bg-stone-300 border-stone-300 max-md:mt-10 max-md:max-w-full" />
-               <article class="mt-12 text-lg text-neutral-700 max-md:mt-10 max-md:max-w-full">
+               <hr class="shrink-0 h-px border border-solid bg-stone-300 border-stone-300" />
+               <article class="text-lg text-neutral-700">
                   <h2 class="text-2xl font-bold">Lorem Ipsum is simply dummy</h2>
                   <br />
                   <p>
@@ -188,17 +249,16 @@
                      and scrambled it to make a type specimen book. It has survived not only five centuries, but also
                      the leap into electronic typesetting, remaining essentially unchanged. It was
                   </p>
-         </div>
+            </div>
       </section>
       <!-- END: Tuyển dụng chi tiết -->
 
 
-
       <!-- START: Trở thành thành viên của DTF -->
-      <section class="md:py-16 py-10 w-full bg-stone-200">
-         <div class="max-w-[1440px] mx-auto flex flex-col w-full px-5 md:px-20 md:gap-16 gap-10">
+      <section class="md:py-16 py-10 w-full bg-stone-200 font-['Nunito_Sans'] px-3 md:px-0">
+         <div class="max-w-[1440px] mx-auto flex flex-col w-full md:gap-16 gap-10">
             <div
-               class="h-[0.5px] bg-orange-400 border-2 md:border-4 border-[#FCB040] border-solid max-md:max-w-full w-[100px] md:w-[150px]">
+               class="h-[0.5px] bg-orange-400 border-2 md:border-4 border-[#FCB040] border-solid w-[100px] md:w-[150px]">
             </div>
             <div class="md:text-5xl font-bold text-blue-900 md:leading-[60px] text-4xl">
                Trở thành thành viên của DTF
