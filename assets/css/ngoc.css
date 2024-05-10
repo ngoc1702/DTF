@@ -76,6 +76,24 @@
    background: rgba(255, 255, 255, 0.80) !important;
 }
 
+.centered-element {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+ }
+ .additional-content {
+   display: none;
+ }
+
+ .box:hover .additional-content {
+   display: flex;
+ }
+
+ .box:hover .box2 {
+   display: none;
+ }
+ 
 .blur-image_banner{
    background-size: cover;
    // background-color:
