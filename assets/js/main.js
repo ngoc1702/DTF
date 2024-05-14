@@ -74,6 +74,7 @@ function printClickedElement(event) {
         // Xóa lớp 'active' từ tất cả các phần tử khác
         var allLinks =
             document.querySelectorAll("div a");
+            console.log(allLinks)
         allLinks.forEach(function (link) {
             if (link !== clickedElement) {
                 link.classList.remove("active");
