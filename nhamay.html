@@ -24,6 +24,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Swiper -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+
+
     <main>
         <!--Header-->
         <header class="bg-[#FFF]  fixed nav_header w-full shadow-lg z-20">
@@ -400,7 +405,7 @@
         <!-- Quy mo du an  -->
         <section class="quymo-duan">
 
-            <div class="flex justify-center items-center px-16 py-20 bg-stone-200 max-md:px-5">
+            <div class="flex justify-center items-center px-16 py-12 bg-stone-200 max-md:px-5">
                 <div class="flex flex-col mt-1.5 w-full max-md:max-w-full max-content">
                     <div
                         class="shrink-0 h-[0.5px] bg-orange-400 border-2 md:border-4 border-[#FCB040] border-solid max-md:max-w-full w-[100px] md:w-[150px]">
@@ -421,11 +426,11 @@
                                 class="shrink-0 w-4 aspect-square" />
                         </div>
                     </div>
-                    <div class="mt-20 max-md:mt-10 max-md:max-w-full">
+                    <div class="mt-20 max-md:mt-5 max-md:max-w-full">
                         <div class="flex gap-5 max-md:flex-col max-md:gap-0">
                             <div class="flex flex-col w-3/12 max-md:ml-0 max-md:w-full">
                                 <div
-                                    class="flex flex-col grow items-start py-7 pr-20 pl-8 w-full bg-white max-md:px-5 max-md:mt-10">
+                                    class="flex flex-col grow items-start py-7 pr-20 pl-8 w-full bg-white max-md:px-5 max-md:mt-6">
                                     <div class="text-base text-neutral-700">Tổng diện tích nhà máy</div>
                                     <div class="mt-5 text-2xl font-bold leading-7 text-slate-700">
                                         2000m2
@@ -508,7 +513,7 @@
 
         <!-- Hệ thống máy móc -->
         <section class="hethong-maymoc">
-            <section class="py-10 md:pt-16 ">
+            <section class="py-8 md:pt-16 ">
 
                 <header
                     class="max-content md:px- px-5 flex md:gap-5 gap-2 self-center  w-full font-semibold  justify-center ">
@@ -634,6 +639,7 @@
                 class=" pt-2 mt-3 md:mt-6 self-center text-5xl font-semibold md:leading-8 text-center text-blue-900 max-md:max-w-full max-md:text-3xl leading-[48px]">
                 Vật liệu
             </h2>
+            <!--PC-->
             <div class="flex flex-col items-center px-5">
                 <div class="mt-20 text-lg text-center text-neutral-700 max-md:mt-10 max-md:max-w-full">
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -683,8 +689,7 @@
                     </div>
                 </div>
                 <!-- Vat lieu mobile -->
-                <div class="block md:hidden ">
-                    <div class="swiper mySwiper_mb">
+                <div class="flex md:hidden swiper mySwiper_mb">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             
@@ -697,10 +702,10 @@
                                         class="flex blur-image flex-col items-start px-14 pt-64 pb-12 max-md:px-5 max-md:max-w-full">
                                         <h3 class=" text-xl max-md:mt-10 max-md:max-w-full">Gỗ tự nhiên</h3>
                                         <a href="#" class="flex gap-3 mt-4">
-                                            <span class="my-auto text-base">Xem thêm</span>
-                                            <img loading="lazy"
-                                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/9acc647bead820972d16638f049e4724d24d25a880cdcc7701391be799dee3e3?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                                alt="Arrow icon" class="shrink-0 w-4 aspect-square" />
+                                            <span class="my-auto font-medium">Gỗ tự nhiên DTF sử dụng là những loại gỗ
+                                                giá
+                                                trị cao như: Gỗ sồi Mỹ, gỗ sồi Nga, Gỗ Tần Bì, ...</span>
+                                           
                                         </a>
                                     </div>
                                 </article>
@@ -717,21 +722,39 @@
                                         class="flex blur-image flex-col items-start px-14 pt-64 pb-12 max-md:px-5 max-md:max-w-full">
                                         <h3 class=" text-xl max-md:mt-10 max-md:max-w-full">Gỗ công nghiệp</h3>
                                         <a href="#" class="flex gap-3 mt-4">
-                                            <span class="my-auto text-base">Xem thêm</span>
+                                            <span class="my-auto font-medium">Gỗ công nghiệp với các loại mẫu mã có sẵn
+                                                như: Melamine, Acrylic, Laminate, MDF, MFC, ...</span>
+
+                                        </a>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="flex flex-col w-[100%] max-md:ml-0 max-md:w-full">
+                                <article
+                                    class=" flex overflow-hidden relative flex-col grow justify-center text-lg font-semibold text-white  max-md:max-w-full">
+                                    <img loading="lazy"
+                                        src="https://cdn.builder.io/api/v1/image/assets/TEMP/9f4b748d0c8e90d6af4e33e446457cde163a3868ca5742a42205a30a1e06834a?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
+                                        alt="Thiết kế, thi công nội thất và xây dựng"
+                                        class="w-full min-h-[450px] object-cover inset-0   " />
+                                    <div
+                                        class="flex blur-image flex-col items-start px-14 pt-64 pb-12 max-md:px-5 max-md:max-w-full">
+                                        <h3 class=" text-xl max-md:mt-10 max-md:max-w-full">Bảo dưỡng, bảo trì</h3>
+                                        <a href="#" class="flex gap-3 mt-4">
+                                            <span class="text-base my-auto">Xem thêm</span>
                                             <img loading="lazy"
                                                 src="https://cdn.builder.io/api/v1/image/assets/TEMP/9acc647bead820972d16638f049e4724d24d25a880cdcc7701391be799dee3e3?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
                                                 alt="Arrow icon" class="shrink-0 w-4 aspect-square" />
                                         </a>
                                     </div>
                                 </article>
-                            
+                            </div>
                         </div>
-                       
                     </div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-pagination"></div>
-                </div>
                 </div>
             </div>
         </section>
@@ -813,7 +836,7 @@
                         <!--Conten trên-->
                         <div class="mx-9 max-md:mt-10 max-md:mr-2.5 max-md:max-w-full mt-12">
                             <div class="flex gap-5 max-md:flex-col max-md:gap-0">
-                                <div class="flex flex-col w-[20%] max-md:ml-0 max-md:w-full ">
+                                <div class="flex flex-col w-[20%] max-md:ml-0 max-md:w-full ml-[20px] ">
                                     <div
                                         class="flex flex-col grow items-center text-3xl font-bold text-center text-white leading-[60px] max-md:mt-10">
                                         <h3>01</h3>
@@ -823,19 +846,19 @@
 
                                     </div>
                                 </div>
-                                <div class="flex flex-colw-[20%] max-md:ml-0 max-md:w-full ">
+                                <div class="flex flex-col w-[20%] max-md:ml-0 max-md:w-full ml-[95px] ">
                                     <div
                                         class="flex flex-col grow items-center text-3xl font-bold text-center text-white leading-[60px] max-md:mt-10">
                                         <h3>02</h3>
-                                        <p class="self-stretch mt-2 text-base text-center font-medium">
+                                        <p class="text-center self-stretch mt-2 text-base  font-medium">
                                             Trao đổi khách hàng về các kế hoạch lắp đặt, chi tiết đi kèm
                                         </p>
 
                                     </div>
                                 </div>
-                                <div class="flex flex-col ml-5 w-[20%] max-md:ml-0 max-md:w-full px-5 ">
+                                <div class="flex flex-col  w-[20%] max-md:ml-0 max-md:w-full ml-[95px]">
                                     <div
-                                        class="flex flex-col grow items-center mt-1 text-3xl font-bold text-center text-white leading-[60px] mr-[70px] max-md:mt-10 max-md:max-w-full">
+                                        class="flex flex-col grow items-center mt-1 text-3xl font-bold text-center text-white leading-[60px]  max-md:mt-10 max-md:max-w-full">
                                         <h3>03</h3>
                                         <p
                                             class="  self-stretch mt-2  text-base text-center ml-[-10px] font-medium max-md:max-w-full">
@@ -844,7 +867,7 @@
 
                                     </div>
                                 </div>
-                                <div class="flex flex-col ml-5 w-[20%] max-md:ml-0 max-md:w-full">
+                                <div class="flex flex-col ml-5 w-[20%] max-md:ml-0 max-md:w-full ml-[92px]">
                                     <div
                                         class="flex flex-col grow items-center mt-1 text-3xl font-bold text-center text-white leading-[60px] max-md:mt-10">
                                         <h3>04</h3>
@@ -854,7 +877,7 @@
 
                                     </div>
                                 </div>
-                                <div class="flex flex-col ml-5 w-[20%] max-md:ml-0 max-md:w-full">
+                                <div class="flex flex-col ml-5 w-[20%] max-md:ml-0 max-md:w-full ml-[80px]">
                                     <div
                                         class="flex flex-col grow items-center mt-1 text-3xl font-bold text-center text-white leading-[60px] max-md:mt-10">
                                         <h3>05</h3>
@@ -909,7 +932,7 @@
                     <div class="block md:hidden mt-6">
                         <div class="flex justify-center items-stretch gap-5 md:ml-4 mt-3 ">
                             <div
-                                class="justify-center items-center text-md font-bold text-center text-white pt-4 mt-2 whitespace-nowrap bg-orange-400 rounded-full h-[60px] w-[110px] ">
+                                class="justify-center items-center text-md font-bold text-center text-white pt-[19px] mt-2 whitespace-nowrap bg-orange-400 rounded-full h-[60px] w-[95px] ">
                                 01
                             </div>
                             <div>
@@ -922,7 +945,7 @@
                         </div>
                         <div class="flex justify-center items-stretch gap-5 md:ml-4 mt-3 ">
                             <div
-                                class="justify-center items-center text-md font-bold text-center text-white pt-4 mt-2 whitespace-nowrap bg-orange-400 rounded-full h-[60px] w-[150px] ">
+                                class="justify-center items-center text-md font-bold text-center text-white pt-[19px] mt-2 whitespace-nowrap bg-orange-400 rounded-full h-[60px] w-[128px] ">
                                 02
                             </div>
                             <div>
@@ -934,7 +957,7 @@
                         </div>
                         <div class="flex justify-center items-stretch gap-5 md:ml-4 mt-3 ">
                             <div
-                                class="justify-center items-center text-md font-bold text-center text-white pt-4 mt-2 whitespace-nowrap bg-orange-400 rounded-full h-[60px] w-[95px] ">
+                                class="justify-center items-center text-md font-bold text-center text-white pt-[19px] mt-2 whitespace-nowrap bg-orange-400 rounded-full h-[60px] w-[83px] ">
                                 03
                             </div>
                             <div>
@@ -946,7 +969,7 @@
                         </div>
                         <div class="flex justify-center items-stretch gap-5 md:ml-4 mt-3 ">
                             <div
-                                class="justify-center items-center text-md font-bold text-center text-white pt-4 mt-2 whitespace-nowrap bg-orange-400 rounded-full h-[60px] w-[100px] ">
+                                class="justify-center items-center text-md font-bold text-center text-white pt-[19px] mt-2 whitespace-nowrap bg-orange-400 rounded-full h-[60px] w-[89px] ">
                                 04
                             </div>
                             <div>
@@ -958,7 +981,7 @@
                         </div>
                         <div class="flex justify-center items-stretch gap-5 md:ml-4 mt-3 ">
                             <div
-                                class="justify-center items-center text-md font-bold text-center text-white pt-4 mt-2 whitespace-nowrap bg-orange-400 rounded-full h-[60px] w-[105px] ">
+                                class="justify-center items-center text-md font-bold text-center text-white pt-4 mt-2 whitespace-nowrap bg-orange-400 rounded-full h-[60px] w-[94px] ">
                                 05
                             </div>
                             <div>
@@ -988,7 +1011,7 @@
                 Quý khách vui lòng liên hệ với DTF qua điện thoại, email hoặc điền vào mãu thông tin để được tư vấn.
             </p>
             <div class="mt-16 w-full max-md:mt-6 max-md:max-w-full">
-                <div class="relative flex gap-5 max-md:flex-col max-md:gap-0">
+                <div class="relative flex md:grid md:grid-cols-5 gap-5 max-md:flex-col max-md:gap-0">
                     <figure class="hidden md:flex flex-col  w-[56%] max-md:ml-0 max-md:w-full ">
                         <img loading="lazy"
                             src="https://cdn.builder.io/api/v1/image/assets/TEMP/c759435f6e5e2f1ab32b923436f9e2a93b7ab1ebc3ff8763b329df47527d216c?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
@@ -1000,93 +1023,96 @@
                             <div class="flex gap-5 md:mx-4  max-md:flex-wrap max-md:mt-0 max-md:mr-0 max-md:max-w-full">
                                 <label for="name" class="sr-only">Họ tên</label>
                                 <input type="text" id="name" placeholder="Họ tên" aria-label="Họ tên"
-                                    class="w-full justify-center items-start px-2.5 py-2.5 bg-white rounded-md max-md:pr-5" />
+                                    class="border-0 text-black	 border-gray-300 focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500 focus:outline-none w-full justify-center items-start px-2.5 py-2.5 bg-white rounded-md max-md:pr-5" />
                                 <label for="phone" class="sr-only">Số điện thoại</label>
                                 <input type="tel" id="phone" placeholder="Số điện thoại" aria-label="Số điện thoại"
-                                    class="w-full justify-center items-start p-2.5 bg-white rounded-md max-md:pr-5" />
+                                    class="border-0 text-black	 border-gray-300 focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500 focus:outline-none w-full justify-center items-start p-2.5 bg-white rounded-md max-md:pr-5" />
                             </div>
+                            <span id="nameError" class="ml-[20px] read-only pt-2 text-red-500"></span>
+
+                            <span id="phoneError" class="ml-[255px] read-only pt-2 text-red-500"></span>
+
                             <label for="email" class="sr-only">Email</label>
                             <input type="email" id="email" placeholder="Email" aria-label="Email"
-                                class="justify-center items-start px-2.5 py-2.5 md:mx-4 mt-5 whitespace-nowrap bg-white rounded-md max-md:pr-5 max-md:mr-0 max-md:max-w-full" />
-                            <div
-                                class="flex gap-5 px-3 py-2.5 md:mx-4 mt-5 bg-white rounded-md max-md:flex-wrap max-md:mr-0 max-md:max-w-full">
-                                <input type="date" class="flex-auto" />
-                                <!-- <img loading="lazy"
-                                                src="https://cdn.builder.io/api/v1/image/assets/TEMP/4776946ddb1c0d5c3314848c37f4fd370439afa7882958d79b50ff01c4046e1b?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                                alt="" class="shrink-0 self-start w-4 aspect-square" /> -->
-                            </div>
+                                class="border-0 text-black	 border-gray-300 focus:border-yellow-500 focus:ring-1 focus:ring-yellow-500 focus:outline-none justify-center items-start px-2.5 py-2.5 md:mx-4 mt-5 whitespace-nowrap bg-white rounded-md max-md:pr-5 max-md:mr-0 max-md:max-w-full" />
+                            <span id="emailError" class="ml-[20px] read-only pt-2 text-red-500"></span>
+</body>
 
-                            <button type="submit"
-                                class="flex gap-4 self-end px-7 py-3.5 mt-7 text-base md:text-lg font-semibold text-white background_second rounded-[500px] max-md:px-5 max-md:mr-0">
-                                <span>Nhận tư vấn</span>
-                                <img loading="lazy"
-                                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/1c42535ee8e1689ac11dccbe6015902c23fbf964e0bea6c7117991c9acc5311e?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                    alt="" class="shrink-0 self-start w-6 aspect-square pt-1" />
-                            </button>
-                        </form>
+<div class="flex gap-5  md:mx-4 mt-5 bg-white rounded-md max-md:flex-wrap max-md:mr-0 max-md:max-w-full">
+    <input type="date" id="date"
+        class="w-full border-0	text-black	 border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-500 focus:outline-none px-4 py-2 rounded-md" />
+
+</div>
+<span id="dateError" class="ml-[20px] read-only pt-2 text-red-500"></span>
+
+
+<button type="submit"
+    class="flex gap-4 self-end px-7 py-3.5 mt-7 text-base md:text-lg font-semibold text-white background_second rounded-[500px] max-md:px-5 max-md:mr-0">
+    <span>Nhận tư vấn</span>
+    <img loading="lazy"
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/1c42535ee8e1689ac11dccbe6015902c23fbf964e0bea6c7117991c9acc5311e?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
+        alt="" class="shrink-0 self-start w-6 aspect-square pt-1" />
+</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!--Footer-->
+<section class="flex overflow-hidden relative flex-col justify-center min-h-[464px]">
+    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cc7121df96ef0bff6a448306fe4a4db41e5bf3a3d6ae742b0699b563ccc5e38f?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
+        alt="" class="object-cover absolute inset-0 size-full" />
+    <div
+        class="flex relative flex-col items-center px-5 pt-10 md:pt-20 pb-5 w-full bg-black bg-opacity-80 max-md:max-w-full">
+        <div class="mt-4 w-full max-content  max-md:max-w-full">
+            <div class="flex gap-12 max-md:flex-col max-md:gap-0">
+                <div class="flex flex-col w-[38%] max-md:ml-0 max-md:w-full">
+                    <div class="flex flex-col grow items-start mt-1 max-md:mt-6 max-md:max-w-full">
+                        <a href="">
+                            <img src="./assets/images/Logo.png" alt="DTF Việt Nam logo"
+                                class="max-w-full aspect-[2.86] w-[90px] md:w-[120px]" />
+                        </a>
+                        <h2
+                            class="self-stretch mt-4 md:mt-7 text-xl md:text-2xl font-semibold text-white max-md:max-w-full">
+                            Công ty Cổ phần Thương mại Dịch vụ DTF Việt Nam
+                        </h2>
+                        <div class="flex gap-3.5 mt-4 md:mt-8 text-xl md:text-3xl font-extrabold text-orange-400">
+                            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cac4da3e65728bae6f5d7c922c84f3753d3759aede5a11c9630b849b304c07ab?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
+                                alt="" class="shrink-0 w-5 md:w-6 aspect-square" />
+                            <a href="tel:1900988935" class="flex-auto">1900 988 935</a>
+                        </div>
+                        <div class="flex gap-3.5 mt-4 md:mt-6">
+                            <a href="">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3759d68e994d8c21d15cb0299b7915ee5a0a53f669e39522174c5055d4d82680?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
+                                    alt="Facebook icon" class="shrink-0 w-6 aspect-square" />
+                            </a>
+                            <a href="">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4d48d01527415fda32b15ac5d2edba25f8c4b28379abc702ddc0ebac389014c1?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
+                                    alt="YouTube icon" class="shrink-0 aspect-[0.96] w-[23px]" />
+                            </a>
+                            <a href="">
+                                <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b4ad1e2bab0737f1c7b2ddcbd7efc30f1b313f952882b0d979b19bbfadc4caea?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
+                                    alt="Instagram icon" class="shrink-0 aspect-[0.92] w-[22px]" />
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!--Footer-->
-        <section class="flex overflow-hidden relative flex-col justify-center min-h-[464px]">
-            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cc7121df96ef0bff6a448306fe4a4db41e5bf3a3d6ae742b0699b563ccc5e38f?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                alt="" class="object-cover absolute inset-0 size-full" />
-            <div
-                class="flex relative flex-col items-center px-5 pt-10 md:pt-20 pb-5 w-full bg-black bg-opacity-80 max-md:max-w-full">
-                <div class="mt-4 w-full max-content  max-md:max-w-full">
-                    <div class="flex gap-12 max-md:flex-col max-md:gap-0">
-                        <div class="flex flex-col w-[38%] max-md:ml-0 max-md:w-full">
-                            <div class="flex flex-col grow items-start mt-1 max-md:mt-6 max-md:max-w-full">
-                                <a href="">
-                                    <img src="./assets/images/Logo.png" alt="DTF Việt Nam logo"
-                                        class="max-w-full aspect-[2.86] w-[90px] md:w-[120px]" />
-                                </a>
-                                <h2
-                                    class="self-stretch mt-4 md:mt-7 text-xl md:text-2xl font-semibold text-white max-md:max-w-full">
-                                    Công ty Cổ phần Thương mại Dịch vụ DTF Việt Nam
-                                </h2>
-                                <div
-                                    class="flex gap-3.5 mt-4 md:mt-8 text-xl md:text-3xl font-extrabold text-orange-400">
-                                    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/cac4da3e65728bae6f5d7c922c84f3753d3759aede5a11c9630b849b304c07ab?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                        alt="" class="shrink-0 w-5 md:w-6 aspect-square" />
-                                    <a href="tel:1900988935" class="flex-auto">1900 988 935</a>
-                                </div>
-                                <div class="flex gap-3.5 mt-4 md:mt-6">
-                                    <a href="">
-                                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/3759d68e994d8c21d15cb0299b7915ee5a0a53f669e39522174c5055d4d82680?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                            alt="Facebook icon" class="shrink-0 w-6 aspect-square" />
-                                    </a>
-                                    <a href="">
-                                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/4d48d01527415fda32b15ac5d2edba25f8c4b28379abc702ddc0ebac389014c1?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                            alt="YouTube icon" class="shrink-0 aspect-[0.96] w-[23px]" />
-                                    </a>
-                                    <a href="">
-                                        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b4ad1e2bab0737f1c7b2ddcbd7efc30f1b313f952882b0d979b19bbfadc4caea?apiKey=4ea98b4671db4e878c37ea9c15c28237&"
-                                            alt="Instagram icon" class="shrink-0 aspect-[0.92] w-[22px]" />
-                                    </a>
-                                </div>
-                            </div>
+                <div class="flex flex-col ml-5 w-[31%] max-md:ml-0 max-md:w-full">
+                    <div class="text-lg text-white max-md:mt-10">
+                        <div class="">
+                            <div class="text-lg md:text-xl font-semibold uppercase"> Địa chỉ</div>
+                            <div class="text-base md:text-lg">Đường Đào Duy Tùng, Cổ Loa, Đông Anh, Hà Nội</div>
                         </div>
-                        <div class="flex flex-col ml-5 w-[31%] max-md:ml-0 max-md:w-full">
-                            <div class="text-lg text-white max-md:mt-10">
-                                <div class="">
-                                    <div class="text-lg md:text-xl font-semibold uppercase"> Địa chỉ</div>
-                                    <div class="text-base md:text-lg">Đường Đào Duy Tùng, Cổ Loa, Đông Anh, Hà Nội
-                                    </div>
-                                </div>
-                                <div class="mt-4 md:mt-6">
-                                    <div class="text-lg md:text-xl font-semibold uppercase">Trụ sở</div>
-                                    <div class="text-base md:text-lg">Tầng 1A,Tháp C tòa Central Point, 219 Trung
-                                        Kính,
-                                        Yên Hòa, Cầu Giấy, Hà Nội</div>
-                                </div>
-                                <div class="mt-4 md:mt-6">
-                                    <div class="text-lg md:text-xl font-semibold uppercase">Chi nhánh</div>
-                                    <div class="text-base md:text-lg">Số 48 đường số 2, KDC Cityland, Phường 7, Quận
-                                        Gò
-                                        Vấp, TP. Hồ Chí Minh</div>
-                                </div>
+                        <div class="mt-4 md:mt-6">
+                            <div class="text-lg md:text-xl font-semibold uppercase">Trụ sở</div>
+                            <div class="text-base md:text-lg">Tầng 1A,Tháp C tòa Central Point, 219 Trung Kính,
+                                Yên Hòa, Cầu Giấy, Hà Nội</div>
+                        </div>
+                        <div class="mt-4 md:mt-6">
+                            <div class="text-lg md:text-xl font-semibold uppercase">Chi nhánh</div>
+                            <div class="text-base md:text-lg">Số 48 đường số 2, KDC Cityland, Phường 7, Quận Gò
+                                Vấp, TP. Hồ Chí Minh</div>
+                        </div>
 
                             </div>
                         </div>
@@ -1110,11 +1136,9 @@
                 </div>
             </div>
         </section>
-        
-        
+        <script src="/assets/js/main.js"></script>
+        <script src="/assets/js/ngoc_swiper.js"></script>
+        <script src="/assets/js/tailwind_custom.js"></script>
     </main>
-    <script src="/assets/js/main.js"></script>
-    <script src="/assets/js/ngoc_swiper.js"></script>
-    <script src="/assets/js/tailwind_custom.js"></script>
-    </body>
+
 </html>
